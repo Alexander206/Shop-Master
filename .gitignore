@@ -1,0 +1,80 @@
+# Created by https://www.toptal.com/developers/gitignore/api/laravel,visualstudiocode,fuelphp,composer,dotenv
+# Edit at https://www.toptal.com/developers/gitignore?templates=laravel,visualstudiocode,fuelphp,composer,dotenv
+
+### Composer ###
+composer.phar
+/vendor/
+
+# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+### dotenv ###
+.env
+
+### FuelPHP ###
+# the composer package lock file and install directory
+# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# /composer.lock
+/fuel/vendor
+
+# the fuelphp document
+/docs/
+
+# you may install these packages with `oil package`.
+# http://fuelphp.com/docs/packages/oil/package.html
+# /fuel/packages/auth/
+# /fuel/packages/email/
+# /fuel/packages/oil/
+# /fuel/packages/orm/
+# /fuel/packages/parser/
+
+# dynamically generated files
+/fuel/app/logs/*/*/*
+/fuel/app/cache/*/*
+/fuel/app/config/crypt.php
+
+### Laravel ###
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/laravel,visualstudiocode,fuelphp,composer,dotenv
