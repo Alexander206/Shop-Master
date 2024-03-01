@@ -7,11 +7,11 @@ $dotenv->load();
 class Database
 {
 
-    private static $db_host;
-    private static $db_name;
-    private static $db_user;
-    private static $db_pass;
-    private $conn;
+    private static string $db_host;
+    private static string $db_name;
+    private static string $db_user;
+    private static string $db_pass;
+    private object $conn;
 
     public function __construct()
     {
@@ -32,12 +32,12 @@ class Database
         $this->conn->exec("SET CHARACTER SET UTF8");
     }
 
-    public function getConnection()
+    public function getConnection(): object
     {
         return $this->conn;
     }
 
-    public function clouseConnection()
+    public function clouseConnection(): void
     {
         $this->conn = null;
     }

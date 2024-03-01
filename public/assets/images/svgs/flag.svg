@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" id="flag" style="padding: 5px;">
+    <g fill="none" fill-rule="evenodd" transform="translate(-5 -5)"> <!-- Ajusta la posición de acuerdo al tamaño del contenedor -->
+        <g fill="#000" transform="translate(-60 -7762)">
+            <g transform="translate(56 160)">
+                <path d="M4 7608h6v-6H4v6zm8-4h12v-2H12v2zm0 4h12v-2H12v2zm-8 4h20v-2H4v2zm0 4h20v-2H4v2z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

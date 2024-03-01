@@ -5,33 +5,33 @@ require_once(__DIR__ . "./CrudRepository.orm.php");
 
 class CrudRepository implements ICrudRepository
 {
-    protected $table;
-    protected $db;
-    protected static $ormInstance;
+    protected string $table;
+    protected object $db;
+    protected static object $ormInstance;
 
-    public function __construct($table, PDO $connecion)
+    public function __construct($table, PDO $connection)
     {
         $this->table = $table;
-        $this->db = $connecion;
+        $this->db = $connection;
         self::$ormInstance = new CrudRepositoryOrm($this->table, $this->db);
     }
 
-    public function getAll(): array
+    public function getAll(): ?array
     {
         return self::$ormInstance->getAll();
     }
 
-    public function getById(int $id): ?object
+    public function getById(int $id): ?array
     {
         return self::$ormInstance->getById($id);
     }
 
-    public function create(object $entity): ?object
+    public function create(array $entity): ?array
     {
         return self::$ormInstance->insert($entity);
     }
 
-    public function updateById(int $id, object $entity): ?object
+    public function updateById(int $id, array $entity): ?array
     {
         return self::$ormInstance->updateById($id, $entity);
     }

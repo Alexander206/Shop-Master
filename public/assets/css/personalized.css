@@ -1,0 +1,38 @@
+/* Modal Error */
+
+.error_modal .modal-content .modal-body {
+    padding: 0 20px;
+}
+
+.error_modal .modal-content .modal-footer button {
+    margin: 0;
+}
+
+/* Form Login */
+
+#registerForm .login_input_phone {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+}
+
+#registerForm .login_input_phone #inputPhoneNumber {
+    width: 65%;
+    margin-right: 10px;
+}
+
+#registerForm .login_input_phone div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 35%;
+    padding-left: 20px;
+}
+
+#registerForm .login_input_phone div img {
+    width: 26px;
+}
+
+#registerForm .login_input_phone div input {
+    width: 100%;
+}

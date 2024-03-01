@@ -2,31 +2,45 @@
 
 class CrudRepositoryOrm
 {
-    protected $table;
-    protected $db;
+    protected string $table;
+    protected object $db;
 
-    public function __construct($table, PDO $connecion)
+    public function __construct($table, PDO $connection)
     {
         $this->table = $table;
-        $this->db = $connecion;
+        $this->db = $connection;
     }
 
-    public function getAll()
+    public function getAll(): ?array
     {
         $stm = $this->db->prepare("SELECT * FROM {$this->table}");
         $stm->execute();
-        return $stm->fetchAll();
+        $result = $stm->fetchAll();
+
+        return ($result !== false) ? $result : null;
     }
 
-    public function getById($id)
+    public function getById($id): ?array
     {
         $stm = $this->db->prepare("SELECT * FROM {$this->table} WHERE id = :id");
         $stm->bindValue(":id", $id);
         $stm->execute();
-        return $stm->fetch();
+        $result = $stm->fetch();
+
+        return ($result !== false) ? $result : null;
     }
 
-    public function insert($data)
+    public function getByAttribute($attribute, $value): ?array
+    {
+        $stm = $this->db->prepare("SELECT * FROM {$this->table} WHERE $attribute = :value");
+        $stm->bindValue(":value", $value);
+        $stm->execute();
+        $result = $stm->fetch();
+
+        return ($result !== false) ? $result : null;
+    }
+
+    public function insert($data): ?array
     {
         $sql = "INSERT INTO {$this->table} (";
         foreach ($data as $key => $value) {
@@ -53,7 +67,7 @@ class CrudRepositoryOrm
         return $this->getById($lastInsertId);
     }
 
-    public function updateById($id, $data)
+    public function updateById($id, $data): ?array
     {
         $sql = "UPDATE {$this->table} SET ";
         foreach ($data as $key => $value) {
@@ -73,7 +87,7 @@ class CrudRepositoryOrm
         return $this->getById($id);
     }
 
-    public function deleteById($id)
+    public function deleteById($id): bool
     {
         $stm = $this->db->prepare("DELETE FROM {$this->table} WHERE id = :id");
         $stm->bindValue(':id', $id);
@@ -83,7 +97,7 @@ class CrudRepositoryOrm
         return $rowCount > 0;
     }
 
-    public function paginate($page, $limit)
+    public function paginate($page, $limit): array
     {
         $offset = ($page - 1) * $limit;
 
