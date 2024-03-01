@@ -61,7 +61,7 @@ function validatePhoneNumber(phoneNumber) {
 
         alertModal(title, text);
 
-        return false;
+        return null;
     }
 
     return phoneNumber;
@@ -80,9 +80,18 @@ function checkPasswordMatch(password, confirmPassword) {
     }
 }
 
-function alertModal(title, text) {
+function alertModal(title, text, redirect) {
     const $modaltitle = $modalError.querySelector("#errorModalTitle");
     const $modaltext = $modalError.querySelector("#errorModalText");
+    const $modalRedirect = $modalError.querySelector("#errorModalRedirect");
+
+    if (redirect) {
+        $modalRedirect.style.display = "block";
+        $modalRedirect.href = redirect.href;
+        $modalRedirect.textContent = redirect.text;
+    } else {
+        $modalRedirect.style.display = "none";
+    }
 
     $modaltitle.innerHTML = title;
     $modaltext.innerHTML = text;

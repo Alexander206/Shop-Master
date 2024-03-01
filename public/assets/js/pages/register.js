@@ -38,6 +38,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 $registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    const validateObject = (obj) => {
+        for (let key in obj) {
+            if (obj[key] === null) {
+                return false;
+            }
+        }
+        return true;
+    };
+
     const password = validatePassword(event.target.inputPassword.value);
     const confirmPassword = validatePassword(event.target.inputConfirmPassword.value);
 
@@ -52,7 +61,7 @@ $registerForm.addEventListener("submit", (event) => {
         companie_id: 1,
     };
 
-    if (checkPasswordMatch(password, confirmPassword)) {
+    if (checkPasswordMatch(password, confirmPassword) && validateObject(user)) {
         fetchApiRegister(user);
     }
 });
@@ -71,7 +80,14 @@ const fetchApiRegister = async (user) => {
         text = `Error al registrar la cuenta. Por favor, inténtalo de nuevo. </br> El servicio a retornado: <strong>${response.message}</strong>`;
 
         alertModal(title, text);
-    }
+    } else {
+        title = "🟢 Éxito";
+        text = `¡Registro exitoso! Tu cuenta ha sido creada satisfactoriamente. El servicio a retornado: <strong>${response.message}</strong>`;
+        redirect = {
+            href: `${URL_PATH}/`,
+            text: "Inicia Sesión",
+        };
 
-    /* location.reload(); */
+        alertModal(title, text, redirect);
+    }
 };

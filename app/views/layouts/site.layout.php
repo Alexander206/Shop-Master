@@ -34,8 +34,9 @@
                     <h1 class="modal-title fs-5" id="errorModalTitle">Error</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="errorModalText">
-                    ...
+                <div class="modal-body">
+                    <div id="errorModalText"></div>
+                    <a class="btn btn-success errorModalBtn" href="" id="errorModalRedirect"></a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
@@ -47,7 +48,7 @@
     <div class="dark-transparent sidebartoggler"></div>
 
     <script src="<?= URL_PATH ?>/assets/js/pages/main.js"></script>
-    
+
     <script src="<?= URL_PATH ?>/assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="<?= URL_PATH ?>/assets/js/app.min.js"></script>
     <script src="<?= URL_PATH ?>/assets/js/app.init.js"></script>

@@ -73,7 +73,7 @@
                                     <input id="inputConfirmPassword" class="form-control" name="inputConfirmPassword" type="password" required>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary w-100 py-8 mb-4 rounded-2">Iniciar sesión</button>
+                                <button type="submit" class="btn btn-primary w-100 py-8 mb-4 rounded-2">Registrarse</button>
 
                                 <div class="d-flex align-items-center">
                                     <p class="fs-4 mb-0 text-dark">¿Ya tienes una cuenta?</p>

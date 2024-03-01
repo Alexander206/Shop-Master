@@ -25,7 +25,14 @@ const fetchApiLogin = async (document, password) => {
         text = `Error al iniciar sesión. Por favor, asegúrate de que tu correo electrónico y contraseña sean correctos. </br> El servicio a retornado: <strong>${response.message}</strong>`;
 
         alertModal(title, text);
-    }
+    } else {
+        title = "🟢 Éxito";
+        text = `¡Inicio de sesión exitoso! ¡Bienvenido de vuelta!. El servicio a retornado: <strong>${response.message}</strong>`;
+        redirect = {
+            href: `${URL_PATH}/`,
+            text: "Continuar",
+        };
 
-    location.reload();
+        alertModal(title, text, redirect);
+    }
 };
