@@ -4,42 +4,50 @@ require_once(__DIR__ . "/../repository/CrudRepository.orm.php");
 
 class UserOrm extends CrudRepositoryOrm
 {
-    protected string $name;
-    protected string $lastName;
-    protected string $docuemnt;
-    protected string $countryPhone;
-    protected string $phone;
-    protected string $password;
-    protected int $roleId;
-    protected int $companieId;
+    public string $name;
+    public string $lastName;
+    public string $docuemnt;
+    public string $countryPhone;
+    public string $phone;
+    public int $roleId;
+    public int $companieId;
 
-    protected array $arrayUser;
-
-    public function __construct($table, PDO $connection, array $user)
+    public function __construct($table, PDO $connection, $arrayUser = [])
     {
         parent::__construct($table, $connection);
-        $this->name = $user['name'];
-        $this->lastName = $user['last_name'];
-        $this->docuemnt = $user['document'];
-        $this->countryPhone = $user['country_phone'];
-        $this->phone = $user['phone'];
-        $this->password = $user['password'];
-        $this->roleId = $user['role_id'];
-        $this->companieId = $user['companie_id'];
 
-        $this->arrayUser = $user;
+        $this->name = $arrayUser['name'] ?? '';
+        $this->lastName = $arrayUser['last_name'] ?? '';
+        $this->docuemnt = $arrayUser['document'] ?? '';
+        $this->countryPhone = $arrayUser['country_phone'] ?? '';
+        $this->phone = $arrayUser['phone'] ?? '';
+        $this->roleId = $arrayUser['role_id'] ?? -1;
+        $this->companieId = $arrayUser['companie_id'] ?? -1;
     }
 
-
-    public function createUser()
+    public function userExist(string $doc, string $pass): ?UserOrm
     {
-        if (!parent::getByAttribute("document", $this->docuemnt)) {
-            $newUser = parent::insert($this->arrayUser);
+        $user = parent::getByAttribute("document", $doc);
 
-            unset($newUser['id']);
-            $newUser['password'] = "";
+        if ($user !== null && password_verify($pass, $user['password'])) {
+            return new UserOrm($this->table, $this->db, $user);
+        } else {
+            return null;
+        }
+    }
 
-            return new UserOrm($this->table, $this->db, $newUser);
+    public function createUser(array $user): ?UserOrm
+    {
+        $password = $user['password'];
+        $user['password'] = password_hash($password, PASSWORD_DEFAULT);
+
+        if (!parent::getByAttribute("document", $user['document'])) {
+
+            $newUser = parent::insert($user);
+
+            return $this->userExist($user['document'], $password);
+
+            /* return new UserOrm($this->table, $this->db, $user); */
         } else {
             return null;
         }

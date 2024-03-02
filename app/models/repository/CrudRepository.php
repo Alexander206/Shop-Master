@@ -26,6 +26,11 @@ class CrudRepository implements ICrudRepository
         return self::$ormInstance->getById($id);
     }
 
+    public function getByAttribute(string $attribute, string $value): ?array
+    {
+        return self::$ormInstance->getByAttribute($attribute, $value);
+    }
+
     public function create(array $entity): ?array
     {
         return self::$ormInstance->insert($entity);

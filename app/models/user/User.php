@@ -11,10 +11,15 @@ class User extends CrudRepository implements IUser
         parent::__construct('users', $connection);
     }
 
-    public function createUser(array $user): ?object
+    public function userExist($document, $password): ?UserOrm
     {
+        $userOrm = new UserOrm($this->table, $this->db);
+        return $userOrm->userExist($document, $password);
+    }
 
-        $userOrm = new UserOrm($this->table, $this->db, $user);
-        return $userOrm->createUser();
+    public function createUser(array $arrayUser): ?UserOrm
+    {
+        $userOrm = new UserOrm($this->table, $this->db);
+        return $userOrm->createUser($arrayUser);
     }
 }

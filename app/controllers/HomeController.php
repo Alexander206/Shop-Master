@@ -1,10 +1,14 @@
 <?php
 
+require_once(__DIR__ . "/../models/user/User.php");
+
 class HomeController extends Controller
 {
+    private $userModel;
 
     public function __construct(PDO $connection)
     {
+        $this->userModel = new User($connection);
         $this->publicMethods = ["list"];
     }
 

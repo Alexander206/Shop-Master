@@ -22,7 +22,7 @@ const fetchApiLogin = async (document, password) => {
 
     if (!response.success) {
         title = "🔴 Error";
-        text = `Error al iniciar sesión. Por favor, asegúrate de que tu correo electrónico y contraseña sean correctos. </br> El servicio a retornado: <strong>${response.message}</strong>`;
+        text = `Error al iniciar sesión. Por favor, asegúrate de que tu docuemnto y contraseña sean correctos. </br> El servicio a retornado: <strong>${response.message}</strong>`;
 
         alertModal(title, text);
     } else {
@@ -35,4 +35,6 @@ const fetchApiLogin = async (document, password) => {
 
         alertModal(title, text, redirect);
     }
+
+    console.log(response);
 };

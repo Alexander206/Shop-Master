@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . "/../models/user/User.php");
+require_once(__DIR__ . "/../middleware/SessionUser.php");
 
 class UserController extends Controller
 {
@@ -23,12 +24,7 @@ class UserController extends Controller
 
     public function home(): void
     {
-        $res = new Result();
-        $users = $this->userModel->getAll();
-        $res->success = true;
-        $res->result = $users;
-
-        echo json_encode($res);
+        echo 'Estoy en el home de usuarios';
     }
 
     public function login(): void
@@ -69,11 +65,22 @@ class UserController extends Controller
         $postData = file_get_contents('php://input');
         $body = json_decode($postData, true);
 
+        $document = $body["document"];
+        $password = $body["password"];
 
+        $user = $this->userModel->userExist($document, $password);
 
-        $res->success = true;
-        $res->message = "Inicio exitoso";
-        $res->result = $body;
+        if ($user !== null) {
+            $sessionUser = new SessionUser();
+            $sessionUser->login($user, 1800);
+
+            $res->success = true;
+            $res->message = "Inicio exitoso";
+            $res->result = $user;
+        } else {
+            $res->success = false;
+            $res->message = "El inicio de sesión falló";
+        }
 
         echo json_encode($res);
     }
@@ -83,8 +90,6 @@ class UserController extends Controller
         $res = new Result();
         $postData = file_get_contents('php://input');
         $body = json_decode($postData, true)['user'];
-
-        $body['password'] = password_hash($body['password'], PASSWORD_DEFAULT);
 
         $user = $this->userModel->createUser($body);
 
@@ -96,6 +101,16 @@ class UserController extends Controller
             $res->success = false;
             $res->message = "El registro falló";
         }
+
+        echo json_encode($res);
+    }
+
+    public function list()
+    {
+        $res = new Result();
+        $users = $this->userModel->getAll();
+        $res->success = true;
+        $res->result = $users;
 
         echo json_encode($res);
     }

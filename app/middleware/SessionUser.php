@@ -3,19 +3,22 @@
 class SessionUser
 {
 
-    private array $userData;
-    private bool $isLoggedIn = false;
-    private string $expirationTime;
-    private string $lastActivityTime;
+    private string $userData = "userData";
+    private string $isLoggedIn = "isLoggedIn";
+    private string $expirationTime = "expirationTime";
+    private string $lastActivityTime = "lastActivityTime";
 
     public function __construct()
     {
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
     }
 
     public function login($userData, $expirationTime): void
     {
-        $_SESSION[$this->userData] = $userData;
+
+        $_SESSION[$this->userData] = get_object_vars($userData);
         $_SESSION[$this->isLoggedIn] = true;
         $_SESSION[$this->expirationTime] = $expirationTime;
         $_SESSION[$this->lastActivityTime] = time();

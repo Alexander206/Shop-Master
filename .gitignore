@@ -11,6 +11,7 @@ composer.phar
 
 ### dotenv ###
 .env
+.env_prod
 
 ### FuelPHP ###
 # the composer package lock file and install directory
