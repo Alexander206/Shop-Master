@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__ . "./ICrudRepository.php");
-require_once(__DIR__ . "./CrudRepository.orm.php");
+require_once(__DIR__ . "/ICrudRepository.php");
+require_once(__DIR__ . "/CrudRepository.orm.php");
 
 class CrudRepository implements ICrudRepository
 {

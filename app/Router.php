@@ -16,13 +16,20 @@ class Router
 
     public function matchRoute()
     {
-        $url = explode('/', URL);
+        $url = parse_url(URL, PHP_URL_PATH);
+        $url = trim($url, '/');
 
-        $this->controller = !empty($url[1]) ? $url[1] : 'Home';
-        $this->method = !empty($url[2]) ? $url[2] : 'home';
+        $segments = explode('/', $url);
+
+        // El primer segmento es el controlador
+        $this->controller = !empty($segments[0]) ? ucfirst($segments[0]) : 'Home';
+
+        // El segundo segmento (si existe) es el método
+        $this->method = !empty($segments[1]) ? $segments[1] : 'home';
 
         $this->controller = $this->controller . "Controller";
-        require_once(__DIR__ . './controllers/' . $this->controller . '.php');
+
+        require_once(__DIR__ . '/controllers/' . $this->controller . '.php');
     }
 
     public  function run()
