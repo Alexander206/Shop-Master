@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__ . "/../models/user/User.php");
-require_once(__DIR__ . "/../middleware/SessionUser.php");
+require_once (__DIR__ . "/../models/user/User.php");
+require_once (__DIR__ . "/../middleware/SessionUser.php");
 
 class UserController extends Controller
 {

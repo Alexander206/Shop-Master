@@ -16,7 +16,8 @@
               <!-- dark Logo text -->
               <img src="<?= URL_PATH ?>/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2" />
               <!-- Light Logo text -->
-              <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage" />
+              <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2"
+                alt="homepage" />
             </span>
           </a>
           <div class="d-none d-lg-flex align-items-center justify-content-center" style="height: calc(100vh - 80px);">
@@ -31,7 +32,8 @@
                 <div class="mb-5">
                   <h2 class="fw-bolder fs-7 mb-3">Olvidaste tu contraseña?</h2>
                   <p class="mb-0 ">
-                    Ingrese la dirección de correo electrónico asociada con su cuenta y le enviaremos un enlace por correo electrónico para restablecer su contraseña.
+                    Ingrese la dirección de correo electrónico asociada con su cuenta y le enviaremos un enlace por
+                    correo electrónico para restablecer su contraseña.
                   </p>
                 </div>
 
@@ -42,7 +44,8 @@
                   </div>
 
                   <a href="javascript:void(0)" class="btn btn-primary w-100 py-8 mb-3">Recuperar contraseña</a>
-                  <a href="./authentication-login.html" class="btn bg-primary-subtle text-primary w-100 py-8">Iniciar sesión</a>
+                  <a href="./authentication-login.html" class="btn bg-primary-subtle text-primary w-100 py-8">Iniciar
+                    sesión</a>
                 </form>
               </div>
             </div>

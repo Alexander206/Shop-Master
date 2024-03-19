@@ -8,6 +8,5 @@ interface ICrudRepository
     public function create(array $entity): ?array;
     public function updateById(int $id, array $entity): ?array;
     public function deleteById(int $id): bool;
-
     public function paginate(int $page, int $limit): array;
 }

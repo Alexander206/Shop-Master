@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . "/IUser.php");
-require_once(__DIR__ . "/User.orm.php");
-require_once(__DIR__ . "/../repository/CrudRepository.php");
+require_once (__DIR__ . "/IUser.php");
+require_once (__DIR__ . "/User.orm.php");
+require_once (__DIR__ . "/../repository/CrudRepository.php");
 
 class User extends CrudRepository implements IUser
 {

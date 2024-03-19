@@ -32,16 +32,16 @@ class SessionUser
 
     public function getUserData()
     {
-        return isset($_SESSION[$this->userData]) ? $_SESSION[$this->userData] : null;
+        return isset ($_SESSION[$this->userData]) ? $_SESSION[$this->userData] : null;
     }
 
     public function isLoggedIn(): bool
     {
-        return isset($_SESSION[$this->isLoggedIn]) && !empty($_SESSION[$this->isLoggedIn]);
+        return isset ($_SESSION[$this->isLoggedIn]) && !empty ($_SESSION[$this->isLoggedIn]);
     }
 
     public function getLastActivityTime()
     {
-        return isset($_SESSION[$this->lastActivityTime]) ? $_SESSION[$this->lastActivityTime] : null;
+        return isset ($_SESSION[$this->lastActivityTime]) ? $_SESSION[$this->lastActivityTime] : null;
     }
 }

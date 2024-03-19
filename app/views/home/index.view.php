@@ -13,7 +13,8 @@
                                         <li class="breadcrumb-item">
                                             <a class="text-primary text-decoration-none" href="./index.html">Home </a>
                                         </li>
-                                        <li class="breadcrumb-item d-flex justify-content-center align-items-center ps-0">
+                                        <li
+                                            class="breadcrumb-item d-flex justify-content-center align-items-center ps-0">
                                             <iconify-icon icon="tabler:chevron-right"></iconify-icon>
                                         </li>
                                         <li class="breadcrumb-item" aria-current="page">Datatable Advanced</li>
@@ -34,7 +35,8 @@
                                         <h5 class="mb-0">File export</h5>
                                     </div>
                                     <div class="table-responsive">
-                                        <table id="file_export" class="table border table-striped table-bordered display text-nowrap">
+                                        <table id="file_export"
+                                            class="table border table-striped table-bordered display text-nowrap">
                                             <thead>
                                                 <!-- start row -->
                                                 <tr>

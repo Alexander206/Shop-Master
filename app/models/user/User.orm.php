@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . "/../repository/CrudRepository.orm.php");
+require_once (__DIR__ . "/../repository/CrudRepository.orm.php");
 
 class UserOrm extends CrudRepositoryOrm
 {
