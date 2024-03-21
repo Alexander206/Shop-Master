@@ -104,4 +104,4 @@
     </div>
 </div>
 
-<script src="<?= URL_PATH ?>/assets/js/pages/register.js"></script>
+<script src="<?= URL_PATH ?><?= PAGE_USER ?>/register.js"></script>

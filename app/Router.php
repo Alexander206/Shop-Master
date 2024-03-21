@@ -56,7 +56,6 @@ class Router
                 case 'recover':
                     header("Location: " . URL_PATH . "/home/");
                     exit;
-                    break;
             }
         }
 

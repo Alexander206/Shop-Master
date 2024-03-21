@@ -12,3 +12,11 @@ $url = substr($urlPath, strlen($folderPath));
 define("URL", $url);
 define("URL_PATH", $_ENV['URL_SITE']);
 define("NAME_SITE", "Shop Master");
+
+/* Pages */
+
+$pagesPath = "/assets/js/pages/";
+
+define("PAGES_PATH", $pagesPath);
+define("PAGE_HOME", $pagesPath . "home");
+define("PAGE_USER", $pagesPath . "user");

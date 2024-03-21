@@ -7,7 +7,7 @@
                     <a href="<?= URL_PATH ?>/" class="text-nowrap logo-img d-block px-4 py-9 w-100">
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
-                            <img src="<?= URL_PATH ?>/assets/images/logos/logo-icon.svg" alt="homepage"
+                            <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg" alt="homepage"
                                 class="dark-logo" />
                             <!-- Light Logo icon -->
                             <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg" alt="homepage"
@@ -16,7 +16,7 @@
 
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src="<?= URL_PATH ?>/assets/images/logos/logo-text.svg" alt="homepage"
+                            <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" alt="homepage"
                                 class="dark-logo ps-2" />
                             <!-- Light Logo text -->
                             <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2"
@@ -74,4 +74,4 @@
     </div>
 </div>
 
-<script src="<?= URL_PATH ?>/assets/js/pages/login.js"></script>
+<script src="<?= URL_PATH ?><?= PAGE_USER?>/login.js"></script>

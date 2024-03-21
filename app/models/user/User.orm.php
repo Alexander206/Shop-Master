@@ -1,6 +1,6 @@
 <?php
 
-require_once (__DIR__ . "/../repository/CrudRepository.orm.php");
+require_once (__DIR__ . "/../_repository/CrudRepository.orm.php");
 
 class UserOrm extends CrudRepositoryOrm
 {
@@ -42,12 +42,8 @@ class UserOrm extends CrudRepositoryOrm
         $user['password'] = password_hash($password, PASSWORD_DEFAULT);
 
         if (!parent::getByAttribute("document", $user['document'])) {
-
-            $newUser = parent::insert($user);
-
+            parent::insert($user);
             return $this->userExist($user['document'], $password);
-
-            /* return new UserOrm($this->table, $this->db, $user); */
         } else {
             return null;
         }

@@ -10,17 +10,19 @@
                     <b class="logo-icon">
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
-                        <img src="<?= URL_PATH ?>/images/logos/logo-icon.svg" alt="homepage" class="dark-logo" />
+                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-icon.svg" alt="homepage" class="dark-logo" />
                         <!-- Light Logo icon -->
-                        <img src="<?= URL_PATH ?>/images/logos/logo-light-icon.svg" alt="homepage" class="light-logo" />
+                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg" alt="homepage"
+                            class="light-logo" />
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span class="logo-text">
                         <!-- dark Logo text -->
-                        <img src="<?= URL_PATH ?>/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2" />
+                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-text.svg" alt="homepage"
+                            class="dark-logo ps-2" />
                         <!-- Light Logo text -->
-                        <img src="<?= URL_PATH ?>/images/logos/logo-light-text.svg" class="light-logo ps-2"
+                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2"
                             alt="homepage" />
                     </span>
                 </a>
@@ -33,8 +35,8 @@
                         <!-- User Profile-->
                         <div class="user-profile d-flex no-block dropdown mt-3">
                             <div class="user-pic">
-                                <img src="<?= URL_PATH ?>/images/profile/user-6.jpg" alt="users" class="rounded-circle"
-                                    width="40" />
+                                <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg" alt="users"
+                                    class="rounded-circle" width="40" />
                             </div>
                             <div class="user-content hide-menu ms-2">
                                 <a href="#" class="" id="Userdd" role="button" data-bs-toggle="dropdown"
@@ -1658,17 +1660,17 @@
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
                                                     <img class="d-block img-fluid"
-                                                        src="<?= URL_PATH ?>/images/blog/blog-img1.jpg"
+                                                        src="<?= URL_PATH ?>/assets/images/blog/blog-img1.jpg"
                                                         alt="First slide" />
                                                 </div>
                                                 <div class="carousel-item">
                                                     <img class="d-block img-fluid"
-                                                        src="<?= URL_PATH ?>/images/blog/blog-img2.jpg"
+                                                        src="<?= URL_PATH ?>/assets/images/blog/blog-img2.jpg"
                                                         alt="Second slide" />
                                                 </div>
                                                 <div class="carousel-item">
                                                     <img class="d-block img-fluid"
-                                                        src="<?= URL_PATH ?>/images/blog/blog-img3.jpg"
+                                                        src="<?= URL_PATH ?>/assets/images/blog/blog-img3.jpg"
                                                         alt="Third slide" />
                                                 </div>
                                             </div>
@@ -1822,7 +1824,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-chat.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-chat.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -1838,7 +1840,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-invoice.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-invoice.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -1854,7 +1856,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-mobile.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-mobile.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -1870,7 +1872,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-message-box.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-message-box.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -1890,7 +1892,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-cart.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-cart.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -1906,7 +1908,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-date.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-date.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -1922,7 +1924,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-lifebuoy.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-lifebuoy.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -1938,7 +1940,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-application.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-application.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -2025,13 +2027,13 @@
                         <div class="brand-logo d-flex align-items-center justify-content-between">
                             <a href="../main/index.html" class="text-nowrap logo-img">
                                 <b class="">
-                                    <img src="<?= URL_PATH ?>/images/logos/logo-light-icon.svg" alt="homepage"
+                                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg" alt="homepage"
                                         class="" />
                                 </b>
                                 <!--End Logo icon -->
                                 <!-- Logo text -->
                                 <span class="">
-                                    <img src="<?= URL_PATH ?>/images/logos/logo-light-text.svg" class="ps-2"
+                                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="ps-2"
                                         alt="homepage" />
                                 </span>
                             </a>
@@ -2066,17 +2068,17 @@
                                                     <div class="carousel-inner">
                                                         <div class="carousel-item active">
                                                             <img class="d-block img-fluid"
-                                                                src="<?= URL_PATH ?>/images/blog/blog-img1.jpg"
+                                                                src="<?= URL_PATH ?>/assets/images/blog/blog-img1.jpg"
                                                                 alt="First slide" />
                                                         </div>
                                                         <div class="carousel-item">
                                                             <img class="d-block img-fluid"
-                                                                src="<?= URL_PATH ?>/images/blog/blog-img2.jpg"
+                                                                src="<?= URL_PATH ?>/assets/images/blog/blog-img2.jpg"
                                                                 alt="Second slide" />
                                                         </div>
                                                         <div class="carousel-item">
                                                             <img class="d-block img-fluid"
-                                                                src="<?= URL_PATH ?>/images/blog/blog-img3.jpg"
+                                                                src="<?= URL_PATH ?>/assets/images/blog/blog-img3.jpg"
                                                                 alt="Third slide" />
                                                         </div>
                                                     </div>
@@ -2248,8 +2250,8 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="<?= URL_PATH ?>/images/svgs/icon-flag-en.svg" alt="" width="22px"
-                                            height="22px" />
+                                        <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-en.svg" alt=""
+                                            width="22px" height="22px" />
                                     </a>
                                     <div class="dropdown-menu pt-0 dropdown-menu-end dropdown-menu-animate-up mt-n1"
                                         aria-labelledby="drop2">
@@ -2257,32 +2259,32 @@
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-en.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-en.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">English</p>
                                             </a>
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-cn.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-cn.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">Chinese</p>
                                             </a>
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-fr.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-fr.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">French</p>
                                             </a>
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-sa.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-sa.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">Arabic</p>
                                             </a>
@@ -2442,8 +2444,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-1.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-1.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -2459,8 +2461,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-2.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -2477,8 +2479,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-3.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-3.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -2495,8 +2497,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-4.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-4.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -2512,8 +2514,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-5.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-5.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -2529,8 +2531,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-6.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -2561,8 +2563,8 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="<?= URL_PATH ?>/images/profile/user-6.jpg" alt="user" width="30"
-                                            class="profile-pic rounded-circle" />
+                                        <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg" alt="user"
+                                            width="30" class="profile-pic rounded-circle" />
                                     </a>
                                     <div class="dropdown-menu message-box pt-0 content-dd mailbox dropdown-menu-end dropdown-menu-animate-up"
                                         aria-labelledby="drop2">
@@ -2571,7 +2573,7 @@
                                                 <h5 class="mb-0 fs-5">User Profile</h5>
                                             </div>
                                             <div class="d-flex align-items-center py-9 mx-7 border-bottom">
-                                                <img src="<?= URL_PATH ?>/images/profile/user-6.jpg"
+                                                <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg"
                                                     class="rounded-circle" width="80" height="80" alt="" />
                                                 <div class="ms-3">
                                                     <h5 class="mb-1 fs-4 text-secondary">
@@ -2656,20 +2658,20 @@
                                     <b class="logo-icon">
                                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                                         <!-- Dark Logo icon -->
-                                        <img src="<?= URL_PATH ?>/images/logos/logo-icon.svg" alt="homepage"
+                                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-icon.svg" alt="homepage"
                                             class="dark-logo" />
                                         <!-- Light Logo icon -->
-                                        <img src="<?= URL_PATH ?>/images/logos/logo-light-icon.svg" alt="homepage"
-                                            class="light-logo" />
+                                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg"
+                                            alt="homepage" class="light-logo" />
                                     </b>
                                     <!--End Logo icon -->
                                     <!-- Logo text -->
                                     <span class="logo-text">
                                         <!-- dark Logo text -->
-                                        <img src="<?= URL_PATH ?>/images/logos/logo-text.svg" alt="homepage"
+                                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-text.svg" alt="homepage"
                                             class="dark-logo ps-2" />
                                         <!-- Light Logo text -->
-                                        <img src="<?= URL_PATH ?>/images/logos/logo-light-text.svg"
+                                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg"
                                             class="light-logo ps-2" alt="homepage" />
                                     </span>
                                 </a>
@@ -2694,8 +2696,8 @@
                                             <a href="../main/app-chat.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-chat.svg" alt=""
-                                                        class="img-fluid" width="24" height="24" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-chat.svg"
+                                                        alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
                                                     <h6 class="mb-1 bg-hover-primary">
@@ -2710,8 +2712,8 @@
                                             <a href="../main/app-invoice.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-invoice.svg" alt=""
-                                                        class="img-fluid" width="24" height="24" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-invoice.svg"
+                                                        alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
                                                     <h6 class="mb-1 bg-hover-primary">Invoice App</h6>
@@ -2723,8 +2725,8 @@
                                             <a href="../main/app-contact.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-mobile.svg" alt=""
-                                                        class="img-fluid" width="24" height="24" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-mobile.svg"
+                                                        alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
                                                     <h6 class="mb-1 bg-hover-primary">
@@ -2738,7 +2740,7 @@
                                             <a href="../main/app-email.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-message-box.svg"
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-message-box.svg"
                                                         alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
@@ -2751,8 +2753,8 @@
                                             <a href="../main/page-user-profile.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-cart.svg" alt=""
-                                                        class="img-fluid" width="24" height="24" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-cart.svg"
+                                                        alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
                                                     <h6 class="mb-1 bg-hover-primary">
@@ -2767,8 +2769,8 @@
                                             <a href="../main/app-calendar.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-date.svg" alt=""
-                                                        class="img-fluid" width="24" height="24" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-date.svg"
+                                                        alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
                                                     <h6 class="mb-1 bg-hover-primary">
@@ -2782,8 +2784,8 @@
                                             <a href="../main/app-contact2.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-lifebuoy.svg" alt=""
-                                                        class="img-fluid" width="24" height="24" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-lifebuoy.svg"
+                                                        alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
                                                     <h6 class="mb-1 bg-hover-primary">
@@ -2797,7 +2799,7 @@
                                             <a href="../main/app-notes.html" class="d-flex align-items-center">
                                                 <div
                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-application.svg"
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-application.svg"
                                                         alt="" class="img-fluid" width="24" height="24" />
                                                 </div>
                                                 <div class="d-inline-block">
@@ -2888,13 +2890,13 @@
                             <div class="brand-logo d-flex align-items-center justify-content-between">
                                 <a href="../main/index.html" class="text-nowrap logo-img">
                                     <b class="">
-                                        <img src="<?= URL_PATH ?>/images/logos/logo-light-icon.svg" alt="homepage"
-                                            class="" />
+                                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg"
+                                            alt="homepage" class="" />
                                     </b>
                                     <!--End Logo icon -->
                                     <!-- Logo text -->
                                     <span class="">
-                                        <img src="<?= URL_PATH ?>/images/logos/logo-light-text.svg" class="ps-2"
+                                        <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="ps-2"
                                             alt="homepage" />
                                     </span>
                                 </a>
@@ -2924,17 +2926,17 @@
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
                                                     <img class="d-block img-fluid"
-                                                        src="<?= URL_PATH ?>/images/blog/blog-img1.jpg"
+                                                        src="<?= URL_PATH ?>/assets/images/blog/blog-img1.jpg"
                                                         alt="First slide" />
                                                 </div>
                                                 <div class="carousel-item">
                                                     <img class="d-block img-fluid"
-                                                        src="<?= URL_PATH ?>/images/blog/blog-img2.jpg"
+                                                        src="<?= URL_PATH ?>/assets/images/blog/blog-img2.jpg"
                                                         alt="Second slide" />
                                                 </div>
                                                 <div class="carousel-item">
                                                     <img class="d-block img-fluid"
-                                                        src="<?= URL_PATH ?>/images/blog/blog-img3.jpg"
+                                                        src="<?= URL_PATH ?>/assets/images/blog/blog-img3.jpg"
                                                         alt="Third slide" />
                                                 </div>
                                             </div>
@@ -3088,7 +3090,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-chat.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-chat.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3104,7 +3106,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-invoice.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-invoice.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3120,7 +3122,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-mobile.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-mobile.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3136,7 +3138,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-message-box.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-message-box.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3156,7 +3158,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-cart.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-cart.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3172,7 +3174,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-date.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-date.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3188,7 +3190,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-lifebuoy.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-lifebuoy.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3204,7 +3206,7 @@
                                                                 class="d-flex align-items-center pb-9 position-relative">
                                                                 <div
                                                                     class="bg-primary-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-dd-application.svg"
+                                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-dd-application.svg"
                                                                         alt="" class="img-fluid" width="24"
                                                                         height="24" />
                                                                 </div>
@@ -3309,8 +3311,8 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="<?= URL_PATH ?>/images/svgs/icon-flag-en.svg" alt="" width="22px"
-                                            height="22px" />
+                                        <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-en.svg" alt=""
+                                            width="22px" height="22px" />
                                     </a>
                                     <div class="dropdown-menu pt-0 dropdown-menu-end dropdown-menu-animate-up mt-n1"
                                         aria-labelledby="drop2">
@@ -3318,32 +3320,32 @@
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-en.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-en.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">English</p>
                                             </a>
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-cn.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-cn.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">Chinese</p>
                                             </a>
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-fr.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-fr.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">French</p>
                                             </a>
                                             <a href="javascript:void(0)"
                                                 class="d-flex align-items-center gap-3 py-2 px-4 dropdown-item">
                                                 <div class="position-relative">
-                                                    <img src="<?= URL_PATH ?>/images/svgs/icon-flag-sa.svg" alt=""
-                                                        width="20px" height="20px" class="round-20" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/svgs/icon-flag-sa.svg"
+                                                        alt="" width="20px" height="20px" class="round-20" />
                                                 </div>
                                                 <p class="mb-0 fs-3">Arabic</p>
                                             </a>
@@ -3503,8 +3505,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-1.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-1.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -3520,8 +3522,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-2.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -3538,8 +3540,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-3.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-3.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -3556,8 +3558,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-4.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-4.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -3573,8 +3575,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-5.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-5.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -3590,8 +3592,8 @@
                                             <a href="javascript:void(0)"
                                                 class="p-3 pe-0 d-flex align-items-center dropdown-item gap-3 border-bottom">
                                                 <span class="user-img position-relative d-inline-block">
-                                                    <img src="<?= URL_PATH ?>/images/profile/user-6.jpg" alt="user"
-                                                        class="rounded-circle w-100 round" />
+                                                    <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg"
+                                                        alt="user" class="rounded-circle w-100 round" />
                                                     <span
                                                         class="profile-status bg-success position-absolute rounded-circle"></span>
                                                 </span>
@@ -3622,8 +3624,8 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="<?= URL_PATH ?>/images/profile/user-6.jpg" alt="user" width="30"
-                                            class="profile-pic rounded-circle" />
+                                        <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg" alt="user"
+                                            width="30" class="profile-pic rounded-circle" />
                                     </a>
                                     <div class="dropdown-menu message-box pt-0 content-dd mailbox dropdown-menu-end dropdown-menu-animate-up"
                                         aria-labelledby="drop2">
@@ -3632,7 +3634,7 @@
                                                 <h5 class="mb-0 fs-5">User Profile</h5>
                                             </div>
                                             <div class="d-flex align-items-center py-9 mx-7 border-bottom">
-                                                <img src="<?= URL_PATH ?>/images/profile/user-6.jpg"
+                                                <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg"
                                                     class="rounded-circle" width="80" height="80" alt="" />
                                                 <div class="ms-3">
                                                     <h5 class="mb-1 fs-4 text-secondary">
@@ -4985,7 +4987,7 @@
                           ---------------- -->
                         <div class="card card-hover w-100">
                             <div class="card-body" style="
-                      background: url(<?= URL_PATH ?>/images/background/active-bg.png)
+                      background: url(<?= URL_PATH ?>/assets/images/background/active-bg.png)
                         no-repeat top center;
                     ">
                                 <div class="pt-3 text-center">
@@ -5155,7 +5157,7 @@
                                                 <td>
                                                     <div class="d-flex no-block align-items-center">
                                                         <div class="me-3">
-                                                            <img src="<?= URL_PATH ?>/images/profile/user-1.jpg"
+                                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-1.jpg"
                                                                 alt="user" class="rounded-circle" width="45" />
                                                         </div>
                                                         <div class="">
@@ -5173,7 +5175,7 @@
                                                             href="javascript:void(0)">DS</a>
                                                         <a class="btn-circle btn p-0 popover-item"
                                                             href="javascript:void(0)"><img
-                                                                src="<?= URL_PATH ?>/images/profile/user-2.jpg"
+                                                                src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg"
                                                                 class="rounded-circle" width="39" alt="" /></a>
                                                         <a class="btn-circle btn btn-outline-secondary"
                                                             href="javascript:void(0)">+</a>
@@ -5193,7 +5195,7 @@
                                                 <td>
                                                     <div class="d-flex no-block align-items-center">
                                                         <div class="me-3">
-                                                            <img src="<?= URL_PATH ?>/images/profile/user-2.jpg"
+                                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg"
                                                                 alt="user" class="rounded-circle" width="45" />
                                                         </div>
                                                         <div class="">
@@ -5227,7 +5229,7 @@
                                                 <td>
                                                     <div class="d-flex no-block align-items-center">
                                                         <div class="me-3">
-                                                            <img src="<?= URL_PATH ?>/images/profile/user-3.jpg"
+                                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-3.jpg"
                                                                 alt="user" class="rounded-circle" width="45" />
                                                         </div>
                                                         <div class="">
@@ -5263,7 +5265,7 @@
                                                 <td>
                                                     <div class="d-flex no-block align-items-center">
                                                         <div class="me-3">
-                                                            <img src="<?= URL_PATH ?>/images/profile/user-4.jpg"
+                                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-4.jpg"
                                                                 alt="user" class="rounded-circle" width="45" />
                                                         </div>
                                                         <div class="">
@@ -5320,8 +5322,8 @@
                                 <!-- Comment Row -->
                                 <div class="d-flex flex-row comment-row mt-0">
                                     <div class="px-2 py-0">
-                                        <img src="<?= URL_PATH ?>/images/profile/user-5.jpg" alt="user" width="45"
-                                            class="rounded-circle" />
+                                        <img src="<?= URL_PATH ?>/assets/images/profile/user-5.jpg" alt="user"
+                                            width="45" class="rounded-circle" />
                                     </div>
                                     <div class="comment-text w-100">
                                         <h6 class="fw-medium mb-1">James Anderson</h6>
@@ -5353,8 +5355,8 @@
                                 <!-- Comment Row -->
                                 <div class="d-flex flex-row comment-row">
                                     <div class="px-2 py-0">
-                                        <img src="<?= URL_PATH ?>/images/profile/user-6.jpg" alt="user" width="45"
-                                            class="rounded-circle" />
+                                        <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg" alt="user"
+                                            width="45" class="rounded-circle" />
                                     </div>
                                     <div class="comment-text active w-100">
                                         <h6 class="fw-medium mb-1">Michael Jorden</h6>
@@ -5386,8 +5388,8 @@
                                 <!-- Comment Row -->
                                 <div class="d-flex flex-row comment-row">
                                     <div class="px-2 py-0">
-                                        <img src="<?= URL_PATH ?>/images/profile/user-1.jpg" alt="user" width="45"
-                                            class="rounded-circle" />
+                                        <img src="<?= URL_PATH ?>/assets/images/profile/user-1.jpg" alt="user"
+                                            width="45" class="rounded-circle" />
                                     </div>
                                     <div class="comment-text w-100">
                                         <h6 class="fw-medium mb-1">Johnathan Doeting</h6>
@@ -5419,8 +5421,8 @@
                                 <!-- Comment Row -->
                                 <div class="d-flex flex-row comment-row">
                                     <div class="px-2 py-0">
-                                        <img src="<?= URL_PATH ?>/images/profile/user-2.jpg" alt="user" width="45"
-                                            class="rounded-circle" />
+                                        <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg" alt="user"
+                                            width="45" class="rounded-circle" />
                                     </div>
                                     <div class="comment-text w-100">
                                         <h6 class="fw-medium mb-1">James Anderson</h6>
@@ -5452,8 +5454,8 @@
                                 <!-- Comment Row -->
                                 <div class="d-flex flex-row comment-row">
                                     <div class="px-2 py-0">
-                                        <img src="<?= URL_PATH ?>/images/profile/user-4.jpg" alt="user" width="45"
-                                            class="rounded-circle" />
+                                        <img src="<?= URL_PATH ?>/assets/images/profile/user-4.jpg" alt="user"
+                                            width="45" class="rounded-circle" />
                                     </div>
                                     <div class="comment-text active w-100">
                                         <h6 class="fw-medium mb-1">Michael Jorden</h6>
@@ -5503,7 +5505,8 @@
                                         <!--chat Row -->
                                         <li class="chat-item">
                                             <div class="chat-img">
-                                                <img src="<?= URL_PATH ?>/images/profile/user-3.jpg" alt="user" />
+                                                <img src="<?= URL_PATH ?>/assets/images/profile/user-3.jpg"
+                                                    alt="user" />
                                             </div>
                                             <div class="chat-content">
                                                 <h6 class="fw-medium">James Anderson</h6>
@@ -5517,7 +5520,8 @@
                                         <!--chat Row -->
                                         <li class="chat-item">
                                             <div class="chat-img">
-                                                <img src="<?= URL_PATH ?>/images/profile/user-2.jpg" alt="user" />
+                                                <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg"
+                                                    alt="user" />
                                             </div>
                                             <div class="chat-content">
                                                 <h6 class="fw-medium">Bianca Doe</h6>
@@ -5549,7 +5553,8 @@
                                         <!--chat Row -->
                                         <li class="chat-item">
                                             <div class="chat-img">
-                                                <img src="<?= URL_PATH ?>/images/profile/user-5.jpg" alt="user" />
+                                                <img src="<?= URL_PATH ?>/assets/images/profile/user-5.jpg"
+                                                    alt="user" />
                                             </div>
                                             <div class="chat-content">
                                                 <h6 class="fw-medium">Angelina Rhodes</h6>

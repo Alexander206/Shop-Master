@@ -14,7 +14,7 @@ class HomeController extends Controller
 
     public function home(): void
     {
-        $this->render('home/index', [], 'site');
+        $this->render('home/index', [], 'home');
     }
 
     public function dashboard(): void
