@@ -30,21 +30,21 @@ class User implements IUser
     public function loginUser($document, $password): ?array
     {
         $arrayUser = self::$daoInstance->loginUser($document, $password);
-        $this->setAttributes($arrayUser);
+        /* $this->setAttributes($arrayUser); */
         return $arrayUser;
     }
 
     public function registerUser(array $icomingArrayUser): ?array
     {
         $arrayUser = self::$daoInstance->registerUser($icomingArrayUser);
-        $this->setAttributes($arrayUser);
+        /* $this->setAttributes($arrayUser); */
         return $arrayUser;
     }
 
     public function updateUser(int $id, array $icomingArrayUser): ?array
     {
         $arrayUser = self::$daoInstance->updateUser($id, $icomingArrayUser);
-        $this->setAttributes($arrayUser);
+        /* $this->setAttributes($arrayUser); */
         return $arrayUser;
     }
 
@@ -53,7 +53,7 @@ class User implements IUser
         return self::$daoInstance->deleteUser($id);
     }
 
-    private function setAttributes(array $arrayUser)
+    /*  private function setAttributes(array $arrayUser)
     {
         $this->id = $arrayUser['id'] ?? -1;
         $this->name = $arrayUser['name'] ?? '';
@@ -64,9 +64,9 @@ class User implements IUser
         $this->password = $arrayUser['password'] ?? '';
         $this->roleId = $arrayUser['role_id'] ?? -1;
         $this->companieId = $arrayUser['companie_id'] ?? -1;
-    }
+    } */
 
-    /* [Getters and Setters]  */
+    /* [Getters and Setters] */
 
     public function setId(int $id): void
     {

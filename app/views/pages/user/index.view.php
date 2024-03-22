@@ -29,18 +29,7 @@
                                 <!-- end row -->
                             </thead>
 
-                            <tbody>
-                                <tr>
-                                    <td>Jeisson Alexander</td>
-                                    <td>Alexnader Alexander</td>
-                                    <td>0000000000</td>
-                                    <td>+57</td>
-                                    <td>123456879</td>
-                                    <td style="width: 200px">$2y$10$kFbGjh6PuSBOPLCzLSDJ6O2XsnbX72GjGbL/fsdGKzUL1OS7SJohm</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                            </tbody>
+                            <tbody></tbody>
                         </table>
                     </div>
                 </div>
@@ -58,7 +47,7 @@
     document.addEventListener("DOMContentLoaded", async (event) => {
         const $table = document.getElementById("file_export").querySelector("tbody");
 
-        const response = await fetch(`${URL_PATH}/user/list`);
+        const response = await fetch(`${URL_PATH}/user/listUser`);
         const res = await response.json();
 
         const element = res.result.map((item) => {

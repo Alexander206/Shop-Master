@@ -15,8 +15,9 @@ class UserController extends Controller
             "login",
             "authentication",
             "register",
-            "createUser",
-            "recover"
+            "recover",
+            "loginUser",
+            "registerUser"
         ];
     }
 

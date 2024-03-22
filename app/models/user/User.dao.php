@@ -31,8 +31,9 @@ class UserDao extends CrudRepositoryDao implements IUser
         $user['password'] = password_hash($user['password'], PASSWORD_DEFAULT);
 
         if (!parent::getByAttribute("document", $user['document'])) {
-            unset($user['password']);
-            return parent::create($user);
+            $newUser = parent::create($user);
+            unset($newUser['password']);
+            return $newUser;
         } else {
             return null;
         }

@@ -19,6 +19,11 @@ class Router
         $url = parse_url(URL, PHP_URL_PATH);
         $url = trim($url, '/');
 
+        // Excluir la ruta "/assets"
+        if (strpos($url, 'assets') !== false) {
+            return;
+        }
+
         $segments = explode('/', $url);
 
         // El primer segmento es el controlador
@@ -34,6 +39,10 @@ class Router
 
     public function run()
     {
+        if (!isset($this->controller)) {
+            return;
+        }
+
         $database = new Database();
         $connection = $database->getConnection();
         $controller = new $this->controller($connection);

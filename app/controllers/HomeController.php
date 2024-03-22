@@ -9,7 +9,7 @@ class HomeController extends Controller
     public function __construct(PDO $connection)
     {
         $this->userModel = new User($connection);
-        $this->publicMethods = ["list"];
+        $this->publicMethods = ["list", "info"];
     }
 
     public function home(): void
@@ -41,5 +41,10 @@ class HomeController extends Controller
     public function new(): void
     {
         echo "Estoy en Nuevo";
+    }
+
+    public function info(): void
+    {
+        echo phpinfo();
     }
 }

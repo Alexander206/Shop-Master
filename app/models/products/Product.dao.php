@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . "/../_repository/CrudRepository.Dao.php");
+require_once(__DIR__ . "/../_repository/CrudRepository.dao.php");
 
 class ProductDao extends CrudRepositoryDao implements IProduct
 {
