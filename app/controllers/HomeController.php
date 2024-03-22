@@ -1,6 +1,6 @@
 <?php
 
-require_once (__DIR__ . "/../models/user/User.php");
+require_once(__DIR__ . "/../models/user/User.php");
 
 class HomeController extends Controller
 {
@@ -19,7 +19,7 @@ class HomeController extends Controller
 
     public function dashboard(): void
     {
-        $this->render('home/dashboard', [], 'site');
+        echo "Estoy en dashboard";
     }
 
     public function list(): void

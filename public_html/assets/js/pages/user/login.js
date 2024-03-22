@@ -35,6 +35,4 @@ const fetchApiLogin = async (document, password) => {
 
         alertModal(title, text, redirect);
     }
-
-    console.log(response);
 };

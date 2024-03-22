@@ -5,8 +5,6 @@ require_once(__DIR__ . "/User.dao.php");
 
 class User implements IUser
 {
-
-    protected string $table;
     protected static object $daoInstance;
 
     private int $id;
@@ -21,8 +19,7 @@ class User implements IUser
 
     public function __construct(PDO $connection)
     {
-        $this->table = 'users';
-        self::$daoInstance = new UserDao($this->table, $connection);
+        self::$daoInstance = new UserDao('users', $connection);
     }
 
     public function listUsers(): ?array

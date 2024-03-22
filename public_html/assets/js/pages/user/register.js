@@ -75,8 +75,6 @@ const fetchApiRegister = async (user) => {
     let res = await fetch(`${URL_PATH}/user/registerUser`, options);
     let response = await res.json();
 
-    console.log(response);
-
     if (!response.success) {
         title = "🔴 Error";
         text = `Error al registrar la cuenta. Por favor, inténtalo de nuevo. </br> El servicio a retornado: <strong>${response.message}</strong>`;

@@ -20,3 +20,4 @@ $pagesPath = "/assets/js/pages/";
 define("PAGES_PATH", $pagesPath);
 define("PAGE_HOME", $pagesPath . "home");
 define("PAGE_USER", $pagesPath . "user");
+define("PAGE_PRODUCT", $pagesPath . "product");

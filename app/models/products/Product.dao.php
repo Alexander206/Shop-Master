@@ -2,54 +2,43 @@
 
 require_once(__DIR__ . "/../_repository/CrudRepository.Dao.php");
 
-class ProductDao extends CrudRepositoryDao
+class ProductDao extends CrudRepositoryDao implements IProduct
 {
-    protected string $image;
-    public string $name;
-    public string $description;
-    public float $price;
-    public int $stock;
-    public string $creationDate;
-    public string $updateDate;
-
-    public function __construct($table, PDO $connection, $arrayProduct = [])
+    public function __construct($table, PDO $connection)
     {
         parent::__construct($table, $connection);
-
-        $this->name = $arrayProduct['name'] ?? '';
-        $this->description = $arrayProduct['description'] ?? '';
-        $this->price = $arrayProduct['price'] ?? 0;
-        $this->stock = $arrayProduct['stock'] ?? 0;
-        $this->categoryId = $arrayProduct['category_id'] ?? -1;
-        $this->userId = $arrayProduct['user_id'] ?? -1;
-    }
-
-    public function createProduct(array $product): ?ProductDao
-    {
-        if (!parent::getByAttribute("name", $product['name'])) {
-            return parent::insert($product);
-        } else {
-            return null;
-        }
-    }
-
-    public function updateProduct(array $product): ?ProductDao
-    {
-        return parent::update($product);
-    }
-
-    public function deleteProduct(int $id): ?ProductDao
-    {
-        return parent::delete($id);
-    }
-
-    public function getProduct(int $id): ?ProductDao
-    {
-        return parent::getById($id);
     }
 
     public function getProducts(): ?array
     {
         return parent::getAll();
+    }
+
+    public function getProduct(int $id): ?array
+    {
+        return parent::getById($id);
+    }
+
+    public function createProduct(array $product): ?array
+    {
+        $data = $product['data'];
+        $image = $product['image'];
+        $targetPath = __DIR__ . '/../../../public_html/assets/images/product/' . $image['name'];
+        $imagePath = '/assets/images/product/' . $image['name'];
+
+        move_uploaded_file($image['tmp_name'], $targetPath);
+        $data['image'] = $imagePath;
+
+        return parent::create($data);
+    }
+
+    public function updateProduct(int $id, array $product): ?array
+    {
+        return parent::updateById($id, $product);
+    }
+
+    public function deleteProduct(int $id): ?bool
+    {
+        return parent::deleteById($id);
     }
 }

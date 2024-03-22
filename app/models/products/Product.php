@@ -1,28 +1,66 @@
 <?php
 
+require_once(__DIR__ . "/IProduct.php");
+require_once(__DIR__ . "/Product.dao.php");
+
 class Product implements IProduct
 {
+    protected static object $daoInstance;
+
     private int $id;
-    private $image;
-    private $name;
-    private $description;
-    private $price;
-    private $stock;
-    private $creationDate;
-    private $updateDate;
+    private string $image;
+    private string $name;
+    private string $description;
+    private float $price;
+    private int $stock;
+    private int $brandId;
+    private DateTime $creationDate;
+    private DateTime $updateDate;
 
-
-    public function __construct($id, $name, $description, $price, $stock, $creationDate, $updateDate, $image)
+    public function __construct(PDO $connection)
     {
-        $this->id = $id;
-        $this->name = $name;
-        $this->description = $description;
-        $this->price = $price;
-        $this->stock = $stock;
-        $this->creationDate = $creationDate;
-        $this->updateDate = $updateDate;
-        $this->image = $image;
+        self::$daoInstance = new ProductDao('products', $connection);
     }
+
+    public function getProducts(): ?array
+    {
+        return self::$daoInstance->getProducts();
+    }
+
+    public function getProduct(int $id): ?array
+    {
+        return self::$daoInstance->getProduct($id);
+    }
+
+    public function createProduct(array $product): ?array
+    {
+        return self::$daoInstance->createProduct($product);
+    }
+
+    public function updateProduct(int $id, array $product): ?array
+    {
+        return self::$daoInstance->updateProduct($product);
+    }
+
+    public function deleteProduct(int $id): ?bool
+    {
+        return self::$daoInstance->deleteProduct($id);
+    }
+
+    private function setAttributes(array $arrayUser)
+    {
+        $this->id = $arrayUser['id'] ?? -1;
+        $this->image = $arrayUser['name'] ?? '';
+        $this->name = $arrayUser['last_name'] ?? '';
+        $this->description = $arrayUser['document'] ?? '';
+        $this->price = $arrayUser['country_phone'] ?? '';
+        $this->stock = $arrayUser['phone'] ?? '';
+        $this->brandId = $arrayUser['password'] ?? '';
+        $this->creationDate = $arrayUser['role_id'] ?? -1;
+        $this->updateDate = $arrayUser['companie_id'] ?? -1;
+    }
+
+    /* [ Getters and Setters ] */
 
     public function getId(): ?int
     {
@@ -84,29 +122,33 @@ class Product implements IProduct
         $this->stock = $stock;
     }
 
-    public function getCreationDate(): ?string
+    public function getBrandId(): ?int
+    {
+        return $this->brandId;
+    }
+
+    public function setBrandId(int $brandId): void
+    {
+        $this->brandId = $brandId;
+    }
+
+    public function getCreationDate(): ?DateTime
     {
         return $this->creationDate;
     }
 
     public function setCreationDate(string $creationDate): void
     {
-        $this->creationDate = $creationDate;
+        $this->creationDate = new DateTime($creationDate);
     }
 
-    public function getUpdateDate(): ?string
+    public function getUpdateDate(): ?DateTime
     {
         return $this->updateDate;
     }
 
     public function setUpdateDate(string $updateDate): void
     {
-        $this->updateDate = $updateDate;
+        $this->updateDate = new DateTime($updateDate);
     }
-
-    /* public function getProducts(): ?array;
-    public function getProduct(int $id): ?array;
-    public function createProduct(array $product): ?object;
-    public function updateProduct(array $product): ?object;
-    public function deleteProduct(int $id): ?object; */
 }

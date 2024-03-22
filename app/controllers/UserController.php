@@ -24,7 +24,7 @@ class UserController extends Controller
 
     public function home(): void
     {
-        echo 'Estoy en el home de usuarios';
+        $this->render('user/index', [], 'home');
     }
 
     public function login(): void
@@ -50,11 +50,6 @@ class UserController extends Controller
     public function config(): void
     {
         echo "Estoy en la configuración";
-    }
-
-    public function edit(): void
-    {
-        echo "Estoy en la edición de usuarios";
     }
 
     /* Endpoinds */
@@ -122,7 +117,6 @@ class UserController extends Controller
         $id = json_decode($postData, true)['id'];
         $body = json_decode($postData, true)['user'];
 
-
         $user = $this->userModel->updateUser($id, $body);
 
         if ($user !== null) {
@@ -132,6 +126,25 @@ class UserController extends Controller
         } else {
             $res->success = false;
             $res->message = "La edición falló";
+        }
+
+        echo json_encode($res);
+    }
+
+    public function deleteUser()
+    {
+        $res = new Result();
+        $postData = file_get_contents('php://input');
+        $id = json_decode($postData, true)['id'];
+
+        $user = $this->userModel->deleteUser($id);
+
+        if ($user) {
+            $res->success = true;
+            $res->message = "La eliminación fue exitosa";
+        } else {
+            $res->success = false;
+            $res->message = "La eliminación falló";
         }
 
         echo json_encode($res);
