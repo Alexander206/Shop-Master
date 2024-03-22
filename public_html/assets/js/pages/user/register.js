@@ -72,8 +72,10 @@ const fetchApiRegister = async (user) => {
         body: JSON.stringify({ user }),
     };
 
-    let res = await fetch(`${URL_PATH}/user/createUser`, options);
+    let res = await fetch(`${URL_PATH}/user/registerUser`, options);
     let response = await res.json();
+
+    console.log(response);
 
     if (!response.success) {
         title = "🔴 Error";

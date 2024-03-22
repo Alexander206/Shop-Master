@@ -1,6 +1,8 @@
 <?php
 
-class CrudRepositoryOrm
+require_once(__DIR__ . "/ICrudRepository.php");
+
+class CrudRepositoryDao implements ICrudRepository
 {
     protected string $table;
     protected object $db;
@@ -13,7 +15,8 @@ class CrudRepositoryOrm
 
     public function getAll(): ?array
     {
-        $stm = $this->db->prepare("SELECT * FROM {$this->table}");
+        $query = "SELECT * FROM {$this->table}";
+        $stm = $this->db->prepare($query);
         $stm->execute();
         $result = $stm->fetchAll();
 
@@ -22,7 +25,8 @@ class CrudRepositoryOrm
 
     public function getById($id): ?array
     {
-        $stm = $this->db->prepare("SELECT * FROM {$this->table} WHERE id = :id");
+        $query = "SELECT * FROM {$this->table} WHERE id = :id";
+        $stm = $this->db->prepare($query);
         $stm->bindValue(":id", $id);
         $stm->execute();
         $result = $stm->fetch();
@@ -32,7 +36,8 @@ class CrudRepositoryOrm
 
     public function getByAttribute($attribute, $value): ?array
     {
-        $stm = $this->db->prepare("SELECT * FROM {$this->table} WHERE $attribute = :value");
+        $query = "SELECT * FROM {$this->table} WHERE $attribute = :value";
+        $stm = $this->db->prepare($query);
         $stm->bindValue(":value", $value);
         $stm->execute();
         $result = $stm->fetch();
@@ -40,43 +45,41 @@ class CrudRepositoryOrm
         return ($result !== false) ? $result : null;
     }
 
-    public function insert($data): ?array
+    public function create($data): ?array
     {
-        $sql = "INSERT INTO {$this->table} (";
+        $query = "INSERT INTO {$this->table} (";
         foreach ($data as $key => $value) {
-            $sql .= "{$key},";
+            $query .= "{$key},";
         }
-        $sql = trim($sql, ',');
-        $sql .= ") VALUES (";
+        $query = trim($query, ',');
+        $query .= ") VALUES (";
 
         foreach ($data as $key => $value) {
-            $sql .= ":{$key},";
+            $query .= ":{$key},";
         }
-        $sql = trim($sql, ',');
-        $sql .= ")";
+        $query = trim($query, ',');
+        $query .= ")";
 
-        $stm = $this->db->prepare($sql);
+        $stm = $this->db->prepare($query);
+
         foreach ($data as $key => $value) {
             $stm->bindValue(":{$key}", $value);
         }
 
         $stm->execute();
-
-        $lastInsertId = $this->db->lastInsertId();
-
-        return $this->getById($lastInsertId);
+        return $this->getById($this->db->lastInsertId());
     }
 
     public function updateById($id, $data): ?array
     {
-        $sql = "UPDATE {$this->table} SET ";
+        $query = "UPDATE {$this->table} SET ";
         foreach ($data as $key => $value) {
-            $sql .= "{$key} = :{$key},";
+            $query .= "{$key} = :{$key},";
         }
-        $sql = trim($sql, ',');
-        $sql .= " WHERE id = :id ";
+        $query = trim($query, ',');
+        $query .= " WHERE id = :id ";
 
-        $stm = $this->db->prepare($sql);
+        $stm = $this->db->prepare($query);
         foreach ($data as $key => $value) {
             $stm->bindValue(":{$key}", $value);
         }
@@ -89,7 +92,8 @@ class CrudRepositoryOrm
 
     public function deleteById($id): bool
     {
-        $stm = $this->db->prepare("DELETE FROM {$this->table} WHERE id = :id");
+        $query = "DELETE FROM {$this->table} WHERE id = :id";
+        $stm = $this->db->prepare($query);
         $stm->bindValue(':id', $id);
         $stm->execute();
 

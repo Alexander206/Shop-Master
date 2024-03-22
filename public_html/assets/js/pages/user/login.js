@@ -17,7 +17,7 @@ const fetchApiLogin = async (document, password) => {
         body: JSON.stringify({ document, password }),
     };
 
-    let res = await fetch(`${URL_PATH}/user/authentication`, options);
+    let res = await fetch(`${URL_PATH}/user/loginUser`, options);
     let response = await res.json();
 
     if (!response.success) {

@@ -2,6 +2,9 @@
 
 interface IUser
 {
-    public function createUser(array $user): ?object;
-    public function userExist(string $document, string $password): ?object;
+    public function listUsers(): ?array;
+    public function loginUser(string $document, string $password): ?array;
+    public function registerUser(array $user): ?array;
+    public function updateUser(int $id, array $user): ?array;
+    public function deleteUser(int $id): bool;
 }

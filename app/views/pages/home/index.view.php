@@ -1,802 +1,694 @@
-<!-- Sales chart -->
-<div class="row">
-    <div class="col-12">
-        <!-- ---------------------
-              start Sales Summary
-              ---------------- -->
-        <div class="card">
-            <div class="card-body">
-                <div class="d-md-flex align-items-center">
-                    <div>
-                        <h4 class="card-title">Sales Summary</h4>
-                        <h5 class="card-subtitle">Overview of Latest Month</h5>
+<div class="card position-relative overflow-hidden">
+    <div class="shop-part d-flex w-100">
+        <div class="shop-filters flex-shrink-0 border-end d-none d-lg-block">
+            <ul class="list-group pt-2 border-bottom rounded-0">
+                <h6 class="my-3 mx-4 fw-semibold">Filter by Category</h6>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-circles fs-5"></i>All
+                    </a>
+                </li>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-hanger fs-5"></i>Fashion
+                    </a>
+                </li>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-notebook fs-5"></i>Books
+                    </a>
+                </li>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-mood-smile fs-5"></i>Toys
+                    </a>
+                </li>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-device-laptop fs-5"></i>Electronics
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-group pt-2 border-bottom rounded-0">
+                <h6 class="my-3 mx-4 fw-semibold">Sort By</h6>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-ad-2 fs-5"></i>Newest
+                    </a>
+                </li>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-sort-ascending-2 fs-5"></i>Price: High-Low
+                    </a>
+                </li>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-sort-descending-2 fs-5"></i>Price: Low-High
+                    </a>
+                </li>
+                <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                    <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-ad-2 fs-5"></i>Discounted
+                    </a>
+                </li>
+            </ul>
+            <div class="by-gender border-bottom rounded-0">
+                <h6 class="mt-4 mb-3 mx-4 fw-semibold">By Gender</h6>
+                <div class="pb-4 px-4">
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios1">
+                            All
+                        </label>
                     </div>
-                    <div class="ms-auto d-flex no-block align-items-center">
-                        <ul class="list-inline fs-2 dl me-3 mb-0 d-flex gap-1">
-                            <li class="list-inline-item text-info d-flex align-items-center">
-                                <iconify-icon icon="ri:circle-fill" class="fs-3 me-1"></iconify-icon>
-                                Iphone
-                            </li>
-                            <li class="list-inline-item text-primary d-flex align-items-center">
-                                <iconify-icon icon="ri:circle-fill" class="fs-3 me-1"></iconify-icon>
-                                Ipad
-                            </li>
-                        </ul>
-                        <div class="dl">
-                            <select class="form-select">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
-                            </select>
-                        </div>
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios2" value="option1" />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios2">
+                            Men
+                        </label>
                     </div>
-                </div>
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-lg-4 d-md-flex d-lg-block justify-content-between">
-                        <div>
-                            <h1 class="mb-0 mt-4">$6,890.68</h1>
-                            <h6 class="fw-normal text-muted">
-                                Current Month Earnings
-                            </h6>
-                        </div>
-                        <div>
-                            <h3 class="mt-4 mb-0">1,540</h3>
-                            <h6 class="fw-normal text-muted mb-md-0 mt-md-2 mt-lg-0 mt-0">
-                                Current Month Sales
-                            </h6>
-                        </div>
-                        <a class="btn btn-lg btn-primary mt-3 mb-3" href="javascript:void(0)">Last Month
-                            Summary</a>
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios3" value="option1" />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios3">
+                            Women
+                        </label>
                     </div>
-                    <!-- column (sales summery chart) -->
-                    <div class="col-lg-8">
-                        <div class="sales-summery"></div>
-                    </div>
-                    <!-- column -->
-                </div>
-            </div>
-            <!-- -------------------------------------------------------------- -->
-            <!-- Wallet  Summary-->
-            <!-- -------------------------------------------------------------- -->
-            <div class="card-body border-top">
-                <div class="row mb-0">
-                    <!-- col -->
-                    <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="">
-                                <span class="text-orange display-5">
-                                    <iconify-icon icon="solar:wallet-outline"
-                                        class="text-orange iconify-xl"></iconify-icon>
-                                </span>
-                            </div>
-                            <div>
-                                <span>Wallet Balance</span>
-                                <h3 class="fw-medium mb-0">$3,567.53</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="">
-                                <span class="text-cyan display-5">
-                                    <iconify-icon icon="solar:ruble-linear" class="text-cyan iconify-xl"></iconify-icon>
-                                </span>
-                            </div>
-                            <div>
-                                <span>Referral Earnings</span>
-                                <h3 class="fw-medium mb-0">$769.08</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-lg-3 col-md-6 mb-3 mb-md-0">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="">
-                                <span class="text-info display-5">
-                                    <iconify-icon icon="solar:bag-4-outline"
-                                        class="text-info iconify-xl"></iconify-icon>
-                                </span>
-                            </div>
-                            <div>
-                                <span>Estimate Sales</span>
-                                <h3 class="fw-medium mb-0">5489</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="">
-                                <span class="text-primary display-5">
-                                    <iconify-icon icon="solar:dollar-minimalistic-linear"
-                                        class="text-primary iconify-xl"></iconify-icon>
-                                </span>
-                            </div>
-                            <div>
-                                <span>Earnings</span>
-                                <h3 class="fw-medium mb-0">$23,568.90</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                </div>
-            </div>
-        </div>
-        <!-- ---------------------
-                              end Sales Summary
-                          ---------------- -->
-    </div>
-</div>
-<!-- -------------------------------------------------------------- -->
-<!-- Sales chart -->
-<!-- -------------------------------------------------------------- -->
-<!-- -------------------------------------------------------------- -->
-<!-- Email campaign chart -->
-<!-- -------------------------------------------------------------- -->
-<div class="row">
-    <div class="col-lg-8 col-xl-8">
-        <!-- ---------------------
-                              start Email Campaigns
-                          ---------------- -->
-        <div class="card card-hover w-100">
-            <div class="card-body">
-                <div class="d-md-flex align-items-center">
-                    <div>
-                        <h4 class="card-title">Email Campaigns</h4>
-                        <h5 class="card-subtitle">
-                            Overview of Email Campaigns
-                        </h5>
-                    </div>
-                    <div class="ms-auto align-items-center">
-                        <div class="dl">
-                            <select class="form-select">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <!-- column -->
-                <div class="row mt-5 pb-1">
-                    <!-- column -->
-                    <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                        <div id="email-campaign"></div>
-                    </div>
-                    <!-- column (Open Ratio for Campaigns chart) -->
-                    <div class="col-lg-6">
-                        <h1 class="display-6 mb-0 fw-medium">45%</h1>
-                        <span>Open Ratio for Campaigns</span>
-                        <ul class="list-style-none">
-                            <li class="mt-3 d-flex align-items-center">
-                                <iconify-icon icon="ri:circle-fill" class="text-muted me-2 fs-3"></iconify-icon>
-                                Open Ratio <span class="ms-auto">45%</span>
-                            </li>
-                            <li class="mt-3 d-flex align-items-center">
-                                <iconify-icon icon="ri:circle-fill" class="text-info me-2 fs-3"></iconify-icon>
-                                Clicked Ratio <span class="ms-auto">14%</span>
-                            </li>
-                            <li class="mt-3 d-flex align-items-center">
-                                <iconify-icon icon="ri:circle-fill" class="text-orange me-2 fs-3"></iconify-icon>
-                                Un-Open Ratio <span class="ms-auto">25%</span>
-                            </li>
-                            <li class="mt-3 d-flex align-items-center">
-                                <iconify-icon icon="ri:circle-fill" class="text-primary me-2 fs-3"></iconify-icon>
-                                Bounced Ratio <span class="ms-auto">17%</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- column -->
-            </div>
-        </div>
-        <!-- ---------------------
-                              start Email Campaigns
-                          ---------------- -->
-    </div>
-    <div class="col-lg-4 col-xl-4">
-        <!-- ---------------------
-                              start Active Visitors on Site
-                          ---------------- -->
-        <div class="card card-hover w-100">
-            <div class="card-body" style="
-                      background: url(<?= URL_PATH ?>/assets/images/background/active-bg.png)
-                        no-repeat top center;
-                    ">
-                <div class="pt-3 text-center">
-                    <iconify-icon icon="solar:file-text-outline" class="text-orange display-4"></iconify-icon>
-                    <span class="display-4 d-block fw-medium heading">368</span>
-                    <span>Active Visitors on Site</span>
-                    <!-- Progress -->
-                    <div class="progress mt-3" style="height: 4px">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 15%" aria-valuenow="15"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        <div class="progress-bar bg-orange" role="progressbar" style="width: 30%" aria-valuenow="30"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="20"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <!-- Progress -->
-                    <!-- row -->
-                    <div class="row mt-4 mb-3">
-                        <!-- column -->
-                        <div class="col-4 border-end text-start">
-                            <h3 class="mb-0 fw-medium">60%</h3>
-                            Desktop
-                        </div>
-                        <!-- column -->
-                        <div class="col-4 border-end">
-                            <h3 class="mb-0 fw-medium">28%</h3>
-                            Mobile
-                        </div>
-                        <!-- column -->
-                        <div class="col-4 text-end">
-                            <h3 class="mb-0 fw-medium">12%</h3>
-                            Tablet
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="mt-3 btn btn-lg btn-primary">View More
-                        Details</a>
-                </div>
-            </div>
-        </div>
-        <!-- ---------------------
-                              end Active Visitors on Site
-                          ---------------- -->
-    </div>
-</div>
-<!-- -------------------------------------------------------------- -->
-<!-- Email campaign chart -->
-<!-- -------------------------------------------------------------- -->
-<!-- -------------------------------------------------------------- -->
-<!-- Ravenue - page-view-bounce rate -->
-<!-- -------------------------------------------------------------- -->
-<div class="row">
-    <!-- column -->
-    <div class="col-lg-4">
-        <!-- ---------------------
-                                  start Revenue Statistics
-                              ---------------- -->
-        <div class="card text-white card-hover w-100 overflow-hidden">
-            <div class="card-body bg-info">
-                <h4 class="card-title text-white">Revenue Statistics</h4>
-                <div class="d-flex align-items-center mt-2">
-                    <div class="" id="ravenue"></div>
-                    <div class="ms-auto">
-                        <h3 class="fw-medium text-white mb-0">$351</h3>
-                        <span class="text-white op-5">Jan 10 - Jan 20</span>
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios4" value="option1" />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios4">
+                            Kids
+                        </label>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ---------------------
-                                  end Revenue Statistics
-                              ---------------- -->
-    </div>
-    <!-- column -->
-    <div class="col-lg-4">
-        <!-- ---------------------
-                                  start Page Views
-                              ---------------- -->
-        <div class="card text-white card-hover overflow-hidden w-100">
-            <div class="bg-cyan">
-                <div class="card-body pb-3">
-                    <h4 class="card-title text-white">Page Views</h4>
-                    <h3 class="text-white mb-0">
-                        <iconify-icon icon="ri:arrow-up-line"></iconify-icon>
-                        6548
-                    </h3>
-                </div>
-                <div id="views"></div>
-            </div>
-        </div>
-        <!-- ---------------------
-                                  end Page Views
-                              ---------------- -->
-    </div>
-    <!-- column -->
-    <div class="col-lg-4">
-        <!-- ---------------------
-                              start Bounce Rate
-                          ---------------- -->
-        <div class="card card-hover w-100">
-            <div class="card-body pb-3">
-                <h4 class="card-title">Bounce Rate</h4>
-                <div class="d-flex no-block align-items-center mt-5">
-                    <div class="">
-                        <h3 class="fw-medium mb-0">56.33%</h3>
-                        <span class="">Total Bounce</span>
+            <div class="by-pricing border-bottom rounded-0">
+                <h6 class="mt-4 mb-3 mx-4 fw-semibold">By Pricing</h6>
+                <div class="pb-4 px-4">
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios5" value="option1" checked />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios5">
+                            All
+                        </label>
                     </div>
-                    <div class="ms-auto">
-                        <div>
-                            <div id="bouncerate"></div>
-                        </div>
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios6" value="option1" />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios6">
+                            0-50
+                        </label>
+                    </div>
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios7" value="option1" />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios7">
+                            50-100
+                        </label>
+                    </div>
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios8" value="option1" />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios8">
+                            100-200
+                        </label>
+                    </div>
+                    <div class="form-check py-2 mb-0">
+                        <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios9" value="option1" />
+                        <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios9">
+                            Over 200
+                        </label>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ---------------------
-                              end Bounce Rate
-                          ---------------- -->
-    </div>
-</div>
-<!-- -------------------------------------------------------------- -->
-<!-- Ravenue - page-view-bounce rate -->
-<!-- -------------------------------------------------------------- -->
-<!-- -------------------------------------------------------------- -->
-<!-- Table -->
-<!-- -------------------------------------------------------------- -->
-<div class="row">
-    <div class="col-lg-12">
-        <!-- ---------------------
-                              start Projects of the Month
-                          ---------------- -->
-        <div class="card">
-            <div class="card-body">
-                <div class="d-md-flex align-items-center">
-                    <div>
-                        <h4 class="card-title">Projects of the Month</h4>
-                        <h5 class="card-subtitle">Overview of Latest Month</h5>
-                    </div>
-                    <div class="ms-auto d-flex no-block align-items-center">
-                        <div class="dl">
-                            <select class="form-select">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-responsive">
-                    <table class="table no-wrap v-middle">
-                        <thead>
-                            <!-- start row -->
-                            <tr class="border-0">
-                                <th class="border-0">Team Lead</th>
-                                <th class="border-0">Project</th>
-                                <th class="border-0">Team</th>
-                                <th class="border-0">Status</th>
-                                <th class="border-0">Weeks</th>
-                                <th class="border-0">Budget</th>
-                            </tr>
-                            <!-- end row -->
-                        </thead>
-                        <tbody>
-                            <!-- start row -->
-                            <tr>
-                                <td>
-                                    <div class="d-flex no-block align-items-center">
-                                        <div class="me-3">
-                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-1.jpg" alt="user"
-                                                class="rounded-circle" width="45" />
-                                        </div>
-                                        <div class="">
-                                            <h6 class="mb-0">Hanna Gover</h6>
-                                            <span class="text-muted">hgover@gmail.com</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>Elite Admin</td>
-                                <td>
-                                    <div class="popover-icon">
-                                        <a class="btn-circle btn btn-info" href="javascript:void(0)">SS</a>
-                                        <a class="btn-circle btn btn-cyan text-white popover-item"
-                                            href="javascript:void(0)">DS</a>
-                                        <a class="btn-circle btn p-0 popover-item" href="javascript:void(0)"><img
-                                                src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg"
-                                                class="rounded-circle" width="39" alt="" /></a>
-                                        <a class="btn-circle btn btn-outline-secondary" href="javascript:void(0)">+</a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <iconify-icon icon="ri:circle-fill" class="text-orange fs-4"
-                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="In Progress"></iconify-icon>
-                                </td>
-                                <td>35</td>
-                                <td class="">$96K</td>
-                            </tr>
-                            <!-- end row -->
-                            <!-- start row -->
-                            <tr>
-                                <td>
-                                    <div class="d-flex no-block align-items-center">
-                                        <div class="me-3">
-                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg" alt="user"
-                                                class="rounded-circle" width="45" />
-                                        </div>
-                                        <div class="">
-                                            <h6 class="mb-0">Daniel Kristeen</h6>
-                                            <span class="text-muted">Kristeen@gmail.com</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>Real Homes</td>
-                                <td>
-                                    <div class="popover-icon">
-                                        <a class="btn-circle btn btn-info" href="javascript:void(0)">SS</a>
-                                        <a class="btn-circle btn btn-primary text-white popover-item"
-                                            href="javascript:void(0)">DS</a>
-                                        <a class="btn-circle btn btn-outline-secondary" href="javascript:void(0)">+</a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <iconify-icon icon="ri:circle-fill" class="text-success fs-4"
-                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Active"></iconify-icon>
-                                </td>
-                                <td>35</td>
-                                <td class="">$96K</td>
-                            </tr>
-                            <!-- end row -->
-                            <!-- start row -->
-                            <tr>
-                                <td>
-                                    <div class="d-flex no-block align-items-center">
-                                        <div class="me-3">
-                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-3.jpg" alt="user"
-                                                class="rounded-circle" width="45" />
-                                        </div>
-                                        <div class="">
-                                            <h6 class="mb-0">Julian Josephs</h6>
-                                            <span class="text-muted">Josephs@gmail.com</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>MedicalPro Theme</td>
-                                <td>
-                                    <div class="popover-icon">
-                                        <a class="btn-circle btn btn-info" href="javascript:void(0)">SS</a>
-                                        <a class="btn-circle btn btn-cyan text-white popover-item"
-                                            href="javascript:void(0)">DS</a>
-                                        <a class="btn-circle btn btn-orange text-white popover-item"
-                                            href="javascript:void(0)">RP</a>
-                                        <a class="btn-circle btn btn-outline-secondary" href="javascript:void(0)">+</a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <iconify-icon icon="ri:circle-fill" class="text-success fs-4"
-                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Active"></iconify-icon>
-                                </td>
-                                <td>35</td>
-                                <td class="">$96K</td>
-                            </tr>
-                            <!-- end row -->
-                            <!-- start row -->
-                            <tr>
-                                <td>
-                                    <div class="d-flex no-block align-items-center">
-                                        <div class="me-3">
-                                            <img src="<?= URL_PATH ?>/assets/images/profile/user-4.jpg" alt="user"
-                                                class="rounded-circle" width="45" />
-                                        </div>
-                                        <div class="">
-                                            <h6 class="mb-0">Jan Petrovic</h6>
-                                            <span class="text-muted">hgover@gmail.com</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="">MedicalPro Theme</td>
-                                <td>
-                                    <div class="popover-icon">
-                                        <a class="btn-circle btn btn-orange text-white" href="javascript:void(0)">RP</a>
-                                        <a class="btn-circle btn btn-outline-secondary" href="javascript:void(0)">+</a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <iconify-icon icon="ri:circle-fill" class="text-orange fs-4"
-                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="In Progress"></iconify-icon>
-                                </td>
-                                <td>35</td>
-                                <td class="">$96K</td>
-                            </tr>
-                            <!-- end row -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!-- ---------------------
-                              end Projects of the Month
-                          ---------------- -->
-    </div>
-</div>
-<!-- -------------------------------------------------------------- -->
-<!-- Table -->
-<!-- -------------------------------------------------------------- -->
-<!-- -------------------------------------------------------------- -->
-<!-- Recent comment and chats -->
-<!-- -------------------------------------------------------------- -->
-<div class="row">
-    <!-- column -->
-    <div class="col-lg-6">
-        <!-- ---------------------
-                              start Recent Comments
-                          ---------------- -->
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Recent Comments</h4>
-            </div>
-            <div class="comment-widgets scrollable" style="height: 530px" data-simplebar>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row mt-0">
-                    <div class="px-2 py-0">
-                        <img src="<?= URL_PATH ?>/assets/images/profile/user-5.jpg" alt="user" width="45"
-                            class="rounded-circle" />
-                    </div>
-                    <div class="comment-text w-100">
-                        <h6 class="fw-medium mb-1">James Anderson</h6>
-                        <span class="mb-2 d-block">Lorem Ipsum is simply dummy text of the printing and
-                            type setting industry.
-                        </span>
-                        <div class="comment-footer d-md-flex align-items-center">
-                            <span class="badge bg-primary rounded-pill">Pending</span>
-                            <span class="action-icons d-flex">
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:gallery-edit-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:check-square-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:heart-linear"
-                                        class="iconify-sm text-danger"></iconify-icon>
-                                </a>
-                            </span>
-                            <div class="text-muted ms-auto mt-2 mt-md-0">
-                                April 14, 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="px-2 py-0">
-                        <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg" alt="user" width="45"
-                            class="rounded-circle" />
-                    </div>
-                    <div class="comment-text active w-100">
-                        <h6 class="fw-medium mb-1">Michael Jorden</h6>
-                        <span class="mb-2 d-block">Lorem Ipsum is simply dummy text of the printing and
-                            type setting industry.
-                        </span>
-                        <div class="comment-footer d-md-flex align-items-center">
-                            <span class="badge bg-success rounded-pill">Approved</span>
-                            <span class="action-icons d-flex">
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:gallery-edit-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:close-square-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:heart-linear"
-                                        class="iconify-sm text-danger"></iconify-icon>
-                                </a>
-                            </span>
-                            <div class="text-muted ms-auto mt-2 mt-md-0">
-                                April 14, 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="px-2 py-0">
-                        <img src="<?= URL_PATH ?>/assets/images/profile/user-1.jpg" alt="user" width="45"
-                            class="rounded-circle" />
-                    </div>
-                    <div class="comment-text w-100">
-                        <h6 class="fw-medium mb-1">Johnathan Doeting</h6>
-                        <span class="mb-2 d-block">Lorem Ipsum is simply dummy text of the printing and
-                            type setting industry.
-                        </span>
-                        <div class="comment-footer d-md-flex align-items-center">
-                            <span class="badge rounded-pill bg-danger">Rejected</span>
-                            <span class="action-icons d-flex">
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:gallery-edit-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:check-square-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:heart-linear"
-                                        class="iconify-sm text-danger"></iconify-icon>
-                                </a>
-                            </span>
-                            <div class="text-muted ms-auto mt-2 mt-md-0">
-                                April 14, 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="px-2 py-0">
-                        <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg" alt="user" width="45"
-                            class="rounded-circle" />
-                    </div>
-                    <div class="comment-text w-100">
-                        <h6 class="fw-medium mb-1">James Anderson</h6>
-                        <span class="mb-2 d-block">Lorem Ipsum is simply dummy text of the printing and
-                            type setting industry.
-                        </span>
-                        <div class="comment-footer d-md-flex align-items-center">
-                            <span class="badge rounded-pill bg-primary">Pending</span>
-                            <span class="action-icons d-flex">
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:gallery-edit-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:check-square-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:heart-linear"
-                                        class="iconify-sm text-danger"></iconify-icon>
-                                </a>
-                            </span>
-                            <div class="text-muted ms-auto mt-2 mt-md-0">
-                                April 14, 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="px-2 py-0">
-                        <img src="<?= URL_PATH ?>/assets/images/profile/user-4.jpg" alt="user" width="45"
-                            class="rounded-circle" />
-                    </div>
-                    <div class="comment-text active w-100">
-                        <h6 class="fw-medium mb-1">Michael Jorden</h6>
-                        <span class="mb-2 d-block">Lorem Ipsum is simply dummy text of the printing and
-                            type setting industry.
-                        </span>
-                        <div class="comment-footer d-md-flex align-items-center">
-                            <span class="badge bg-success rounded-pill">Approved</span>
-                            <span class="action-icons d-flex">
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:gallery-edit-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:close-square-line-duotone"
-                                        class="iconify-sm"></iconify-icon>
-                                </a>
-                                <a href="javascript:void(0)" class="d-flex">
-                                    <iconify-icon icon="solar:heart-linear"
-                                        class="iconify-sm text-danger"></iconify-icon>
-                                </a>
-                            </span>
-                            <div class="text-muted ms-auto mt-2 mt-md-0">
-                                April 14, 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-            </div>
-        </div>
-        <!-- ---------------------
-                              end Recent Comments
-                          ---------------- -->
-    </div>
-    <!-- column -->
-    <div class="col-lg-6">
-        <!-- ---------------------
-                              start Recent Chats
-                          ---------------- -->
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Recent Chats</h4>
-                <div class="chat-box scrollable position-relative" style="height: 450px" data-simplebar>
-                    <!--chat Row -->
-                    <ul class="chat-list">
-                        <!--chat Row -->
-                        <li class="chat-item">
-                            <div class="chat-img">
-                                <img src="<?= URL_PATH ?>/assets/images/profile/user-3.jpg" alt="user" />
-                            </div>
-                            <div class="chat-content">
-                                <h6 class="fw-medium">James Anderson</h6>
-                                <div class="box bg-secondary-subtle rounded">
-                                    Lorem Ipsum is simply dummy text of the printing
-                                    &amp; type setting industry.
-                                </div>
-                            </div>
-                            <div class="chat-time">10:56 am</div>
+            <div class="by-colors border-bottom rounded-0">
+                <h6 class="mt-4 mb-3 mx-4 fw-semibold">By Colors</h6>
+                <div class="pb-4 px-4">
+                    <ul class="list-unstyled d-flex flex-wrap align-items-center gap-2 mb-0">
+                        <li class="shop-color-list">
+                            <a class="shop-colors-item rounded-circle d-block shop-colors-1" href="javascript:void(0)"></a>
                         </li>
-                        <!--chat Row -->
-                        <li class="chat-item">
-                            <div class="chat-img">
-                                <img src="<?= URL_PATH ?>/assets/images/profile/user-2.jpg" alt="user" />
-                            </div>
-                            <div class="chat-content">
-                                <h6 class="fw-medium">Bianca Doe</h6>
-                                <div class="box bg-secondary-subtle">
-                                    It’s Great opportunity to work.
-                                </div>
-                            </div>
-                            <div class="chat-time">10:57 am</div>
+                        <li class="shop-color-list">
+                            <a class="shop-colors-item rounded-circle d-block shop-colors-2" href="javascript:void(0)"></a>
                         </li>
-                        <!--chat Row -->
-                        <li class="odd chat-item">
-                            <div class="chat-content">
-                                <div class="box bg-info rounded">
-                                    I would love to join the team.
-                                </div>
-                                <br />
-                            </div>
+                        <li class="shop-color-list">
+                            <a class="shop-colors-item rounded-circle d-block shop-colors-3" href="javascript:void(0)"></a>
                         </li>
-                        <!--chat Row -->
-                        <li class="odd chat-item">
-                            <div class="chat-content">
-                                <div class="box bg-info rounded">
-                                    Whats budget of the new project.
-                                </div>
-                                <br />
-                            </div>
-                            <div class="chat-time">10:59 am</div>
+                        <li class="shop-color-list">
+                            <a class="shop-colors-item rounded-circle d-block shop-colors-4" href="javascript:void(0)"></a>
                         </li>
-                        <!--chat Row -->
-                        <li class="chat-item">
-                            <div class="chat-img">
-                                <img src="<?= URL_PATH ?>/assets/images/profile/user-5.jpg" alt="user" />
-                            </div>
-                            <div class="chat-content">
-                                <h6 class="fw-medium">Angelina Rhodes</h6>
-                                <div class="box bg-secondary-subtle rounded">
-                                    Well we have good budget for the project
-                                </div>
-                            </div>
-                            <div class="chat-time">11:00 am</div>
+                        <li class="shop-color-list">
+                            <a class="shop-colors-item rounded-circle d-block shop-colors-5" href="javascript:void(0)"></a>
                         </li>
-                        <!--chat Row -->
-                        <!-- <div id="someDiv"></div> -->
+                        <li class="shop-color-list">
+                            <a class="shop-colors-item rounded-circle d-block shop-colors-6" href="javascript:void(0)"></a>
+                        </li>
+                        <li class="shop-color-list">
+                            <a class="shop-colors-item rounded-circle d-block shop-colors-7" href="javascript:void(0)"></a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="card-body border-top">
-                <div class="row">
-                    <div class="col-9">
-                        <div class="input-field mt-0 mb-0">
-                            <input type="text" id="textarea1" placeholder="Type and enter"
-                                class="form-control border-0" />
+            <div class="p-4">
+                <a href="javascript:void(0)" class="btn btn-primary w-100">Reset Filters</a>
+            </div>
+        </div>
+        <div class="card-body p-4 pb-0">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <a class="btn btn-primary d-lg-none d-flex" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="ti ti-menu-2 fs-6"></i>
+                </a>
+                <h5 class="fs-5 fw-semibold mb-0 d-none d-lg-block">Products</h5>
+                <form class="position-relative">
+                    <input type="text" class="form-control search-chat py-2 ps-5" id="text-srh" placeholder="Search Product" />
+                    <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s11.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Cute Soft Teddybear</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $285 <span class="ms-2 fw-normal text-muted fs-3"><del>$345</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3 d-flex justify-content-end">
-                        <a class="btn-circle btn-lg btn-primary btn text-white" href="javascript:void(0)"><iconify-icon
-                                icon="solar:plain-3-line-duotone"></iconify-icon></a>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s5.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">MacBook Air Pro</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $650 <span class="ms-2 fw-normal text-muted fs-3"><del>$900</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s6.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Gaming Console</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $25 <span class="ms-2 fw-normal text-muted fs-3"><del>$31</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s4.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Boat Headphone</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $50 <span class="ms-2 fw-normal text-muted fs-3"><del>$65</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s10.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Toy Dino for Fun</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $210 <span class="ms-2 fw-normal text-muted fs-3"><del>$250</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s7.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Red Valvet Dress</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $150 <span class="ms-2 fw-normal text-muted fs-3"><del>$200</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s8.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Shoes for Girls</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $300 <span class="ms-2 fw-normal text-muted fs-3"><del>$380</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s9.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Short & Sweet Purse</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $175 <span class="ms-2 fw-normal text-muted fs-3"><del>$200</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s3.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">The Psychology of Money</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $125 <span class="ms-2 fw-normal text-muted fs-3"><del>$137</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s1.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">How Innovation Works</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $275 <span class="ms-2 fw-normal text-muted fs-3"><del>$350</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s12.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Little Angel Toy</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $5 <span class="ms-2 fw-normal text-muted fs-3"><del>$10</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card hover-img overflow-hidden rounded-2">
+                        <div class="position-relative">
+                            <a href="../main/eco-shop-detail.html"><img src="../assets/images/product/s2.jpg" class="card-img-top rounded-0" alt="..." /></a>
+                            <a href="javascript:void(0)" class="text-bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>
+                        </div>
+                        <div class="card-body pt-3 p-4">
+                            <h6 class="fw-semibold fs-4">Psalms Book for Growth</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="fw-semibold fs-4 mb-0">
+                                    $89 <span class="ms-2 fw-normal text-muted fs-3"><del>$99</del></span>
+                                </h6>
+                                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- ---------------------
-              end Recent Chats
-              ---------------- -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-body shop-filters w-100 p-0">
+                <ul class="list-group pt-2 border-bottom rounded-0">
+                    <h6 class="my-3 mx-4 fw-semibold">Filter by Category</h6>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-circles fs-5"></i>All
+                        </a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-hanger fs-5"></i>Fashion
+                        </a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-notebook fs-5"></i>Books
+                        </a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-mood-smile fs-5"></i>Toys
+                        </a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-device-laptop fs-5"></i>Electronics
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group pt-2 border-bottom rounded-0">
+                    <h6 class="my-3 mx-4 fw-semibold">Sort By</h6>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-ad-2 fs-5"></i>Newest
+                        </a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-sort-ascending-2 fs-5"></i>Price: High-Low
+                        </a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-sort-descending-2 fs-5"></i>Price: Low-High
+                        </a>
+                    </li>
+                    <li class="list-group-item border-0 p-0 mx-4 mb-2">
+                        <a class="d-flex align-items-center gap-2 list-group-item-action text-dark px-3 py-6 rounded-1" href="javascript:void(0)"><i class="ti ti-ad-2 fs-5"></i>Discounted
+                        </a>
+                    </li>
+                </ul>
+                <div class="by-gender border-bottom rounded-0">
+                    <h6 class="mt-4 mb-3 mx-4 fw-semibold">By Gender</h6>
+                    <div class="pb-4 px-4">
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios10" value="option1" checked />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios10">
+                                All
+                            </label>
+                        </div>
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios11" value="option1" />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios11">
+                                Men
+                            </label>
+                        </div>
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios12" value="option1" />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios12">
+                                Women
+                            </label>
+                        </div>
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios13" value="option1" />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios13">
+                                Kids
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="by-pricing border-bottom rounded-0">
+                    <h6 class="mt-4 mb-3 mx-4 fw-semibold">By Pricing</h6>
+                    <div class="pb-4 px-4">
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios14" value="option1" checked />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios14">
+                                All
+                            </label>
+                        </div>
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios15" value="option1" />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios15">
+                                0-50
+                            </label>
+                        </div>
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios16" value="option1" />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios16">
+                                50-100
+                            </label>
+                        </div>
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios17" value="option1" />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios17">
+                                100-200
+                            </label>
+                        </div>
+                        <div class="form-check py-2 mb-0">
+                            <input class="form-check-input p-2" type="radio" name="exampleRadios" id="exampleRadios18" value="option1" />
+                            <label class="form-check-label d-flex align-items-center ps-2" for="exampleRadios18">
+                                Over 200
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="by-colors border-bottom rounded-0">
+                    <h6 class="mt-4 mb-3 mx-4 fw-semibold">By Colors</h6>
+                    <div class="pb-4 px-4">
+                        <ul class="list-unstyled d-flex flex-wrap align-items-center gap-2 mb-0">
+                            <li class="shop-color-list">
+                                <a class="shop-colors-item rounded-circle d-block shop-colors-1" href="javascript:void(0)"></a>
+                            </li>
+                            <li class="shop-color-list">
+                                <a class="shop-colors-item rounded-circle d-block shop-colors-2" href="javascript:void(0)"></a>
+                            </li>
+                            <li class="shop-color-list">
+                                <a class="shop-colors-item rounded-circle d-block shop-colors-3" href="javascript:void(0)"></a>
+                            </li>
+                            <li class="shop-color-list">
+                                <a class="shop-colors-item rounded-circle d-block shop-colors-4" href="javascript:void(0)"></a>
+                            </li>
+                            <li class="shop-color-list">
+                                <a class="shop-colors-item rounded-circle d-block shop-colors-5" href="javascript:void(0)"></a>
+                            </li>
+                            <li class="shop-color-list">
+                                <a class="shop-colors-item rounded-circle d-block shop-colors-6" href="javascript:void(0)"></a>
+                            </li>
+                            <li class="shop-color-list">
+                                <a class="shop-colors-item rounded-circle d-block shop-colors-7" href="javascript:void(0)"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <a href="javascript:void(0)" class="btn btn-primary w-100">Reset Filters</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<!-- -------------------------------------------------------------- -->
-<!-- Recent comment and chats -->
-<!-- -------------------------------------------------------------- -->
-
-<script src="../assets/js/dashboards/dashboard1.js"></script>
-<script src="<?= URL_PATH ?><?= PAGE_HOME ?>/main.js"></script>

@@ -18,7 +18,7 @@ class SessionUser
     public function login($userData, $expirationTime): void
     {
 
-        $_SESSION[$this->userData] = get_object_vars($userData);
+        $_SESSION[$this->userData] = $userData;
         $_SESSION[$this->isLoggedIn] = true;
         $_SESSION[$this->expirationTime] = $expirationTime;
         $_SESSION[$this->lastActivityTime] = time();
@@ -32,16 +32,16 @@ class SessionUser
 
     public function getUserData()
     {
-        return isset ($_SESSION[$this->userData]) ? $_SESSION[$this->userData] : null;
+        return isset($_SESSION[$this->userData]) ? $_SESSION[$this->userData] : null;
     }
 
     public function isLoggedIn(): bool
     {
-        return isset ($_SESSION[$this->isLoggedIn]) && !empty ($_SESSION[$this->isLoggedIn]);
+        return isset($_SESSION[$this->isLoggedIn]) && !empty($_SESSION[$this->isLoggedIn]);
     }
 
     public function getLastActivityTime()
     {
-        return isset ($_SESSION[$this->lastActivityTime]) ? $_SESSION[$this->lastActivityTime] : null;
+        return isset($_SESSION[$this->lastActivityTime]) ? $_SESSION[$this->lastActivityTime] : null;
     }
 }

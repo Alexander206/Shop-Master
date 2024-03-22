@@ -1,7 +1,7 @@
 <?php
 
-require_once (__DIR__ . "/../models/user/User.php");
-require_once (__DIR__ . "/../middleware/SessionUser.php");
+require_once(__DIR__ . "/../models/user/User.php");
+require_once(__DIR__ . "/../middleware/SessionUser.php");
 
 class UserController extends Controller
 {
@@ -52,14 +52,24 @@ class UserController extends Controller
         echo "Estoy en la configuración";
     }
 
-    public function editUsers(): void
+    public function edit(): void
     {
         echo "Estoy en la edición de usuarios";
     }
 
     /* Endpoinds */
 
-    public function authentication()
+    public function listUser()
+    {
+        $res = new Result();
+        $users = $this->userModel->listUsers();
+        $res->success = true;
+        $res->result = $users;
+
+        echo json_encode($res);
+    }
+
+    public function loginUser()
     {
         $res = new Result();
         $postData = file_get_contents('php://input');
@@ -68,7 +78,7 @@ class UserController extends Controller
         $document = $body["document"];
         $password = $body["password"];
 
-        $user = $this->userModel->userExist($document, $password);
+        $user = $this->userModel->loginUser($document, $password);
 
         if ($user !== null) {
             $sessionUser = new SessionUser();
@@ -85,13 +95,13 @@ class UserController extends Controller
         echo json_encode($res);
     }
 
-    public function createUser()
+    public function registerUser()
     {
         $res = new Result();
         $postData = file_get_contents('php://input');
         $body = json_decode($postData, true)['user'];
 
-        $user = $this->userModel->createUser($body);
+        $user = $this->userModel->registerUser($body);
 
         if ($user !== null) {
             $res->success = true;
@@ -105,12 +115,24 @@ class UserController extends Controller
         echo json_encode($res);
     }
 
-    public function list()
+    public function editUser()
     {
         $res = new Result();
-        $users = $this->userModel->getAll();
-        $res->success = true;
-        $res->result = $users;
+        $postData = file_get_contents('php://input');
+        $id = json_decode($postData, true)['id'];
+        $body = json_decode($postData, true)['user'];
+
+
+        $user = $this->userModel->updateUser($id, $body);
+
+        if ($user !== null) {
+            $res->success = true;
+            $res->message = "La edición fue exitosa";
+            $res->result = $body;
+        } else {
+            $res->success = false;
+            $res->message = "La edición falló";
+        }
 
         echo json_encode($res);
     }

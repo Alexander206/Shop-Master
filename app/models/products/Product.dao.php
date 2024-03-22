@@ -1,10 +1,10 @@
 <?php
 
-require_once (__DIR__ . "/../_repository/CrudRepository.orm.php");
+require_once(__DIR__ . "/../_repository/CrudRepository.Dao.php");
 
-class ProductOrm extends CrudRepositoryOrm
+class ProductDao extends CrudRepositoryDao
 {
-    public string $image;
+    protected string $image;
     public string $name;
     public string $description;
     public float $price;
@@ -24,7 +24,7 @@ class ProductOrm extends CrudRepositoryOrm
         $this->userId = $arrayProduct['user_id'] ?? -1;
     }
 
-    public function createProduct(array $product): ?ProductOrm
+    public function createProduct(array $product): ?ProductDao
     {
         if (!parent::getByAttribute("name", $product['name'])) {
             return parent::insert($product);
@@ -33,17 +33,17 @@ class ProductOrm extends CrudRepositoryOrm
         }
     }
 
-    public function updateProduct(array $product): ?ProductOrm
+    public function updateProduct(array $product): ?ProductDao
     {
         return parent::update($product);
     }
 
-    public function deleteProduct(int $id): ?ProductOrm
+    public function deleteProduct(int $id): ?ProductDao
     {
         return parent::delete($id);
     }
 
-    public function getProduct(int $id): ?ProductOrm
+    public function getProduct(int $id): ?ProductDao
     {
         return parent::getById($id);
     }
