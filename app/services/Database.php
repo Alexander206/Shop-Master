@@ -25,11 +25,9 @@ class Database
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             ];
 
-
             $this->conn = new PDO('mysql:host=' . self::$db_host . ';dbname=' . self::$db_name, self::$db_user, self::$db_pass, $options);
 
             $this->conn->exec("SET CHARACTER SET UTF8");
-            
         } catch (PDOException $e) {
             die("Connection error: " . $e->getMessage());
         }

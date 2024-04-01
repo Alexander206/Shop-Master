@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once(__DIR__ . "/../models/shopingCar/ShopingCar.php");
 
@@ -6,7 +6,7 @@ class ShopingCarController extends Controller
 {
     private $shopingCarModel;
 
-  /*   public function __construct(PDO $connection)
+    /*   public function __construct(PDO $connection)
     {
         $this->shopingCarModel = new ShopingCar($connection);
         $this->publicMethods = [""];

@@ -16,8 +16,7 @@
               <!-- dark Logo text -->
               <img src="<?= URL_PATH ?>/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2" />
               <!-- Light Logo text -->
-              <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2"
-                alt="homepage" />
+              <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage" />
             </span>
           </a>
           <div class="d-none d-lg-flex align-items-center justify-content-center" style="height: calc(100vh - 80px);">

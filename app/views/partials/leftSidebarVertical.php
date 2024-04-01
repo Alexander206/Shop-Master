@@ -11,18 +11,15 @@
                     <!-- Dark Logo icon -->
                     <img src="<?= URL_PATH ?>/assets/images/logos/logo-icon.svg" alt="homepage" class="dark-logo" />
                     <!-- Light Logo icon -->
-                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg" alt="homepage"
-                        class="light-logo" />
+                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-icon.svg" alt="homepage" class="light-logo" />
                 </b>
                 <!--End Logo icon -->
                 <!-- Logo text -->
                 <span class="logo-text">
                     <!-- dark Logo text -->
-                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-text.svg" alt="homepage"
-                        class="dark-logo ps-2" />
+                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2" />
                     <!-- Light Logo text -->
-                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2"
-                        alt="homepage" />
+                    <img src="<?= URL_PATH ?>/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage" />
                 </span>
             </a>
         </div>
@@ -34,12 +31,10 @@
                     <!-- User Profile-->
                     <div class="user-profile d-flex no-block dropdown mt-3">
                         <div class="user-pic">
-                            <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg" alt="users"
-                                class="rounded-circle" width="40" />
+                            <img src="<?= URL_PATH ?>/assets/images/profile/user-6.jpg" alt="users" class="rounded-circle" width="40" />
                         </div>
                         <div class="user-content hide-menu ms-2">
-                            <a href="#" class="" id="Userdd" role="button" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <a href="#" class="" id="Userdd" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <h5 class="mb-0 user-name fw-medium d-flex">
                                     Steave Jobs
                                     <iconify-icon icon="solar:alt-arrow-down-outline" class="ms-2"></iconify-icon>
@@ -48,26 +43,20 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
                                 <a class="dropdown-item d-flex" href="../main/page-user-profile.html">
-                                    <iconify-icon icon="solar:user-linear"
-                                        class="text-info iconify-sm me-2 ms-1"></iconify-icon>
+                                    <iconify-icon icon="solar:user-linear" class="text-info iconify-sm me-2 ms-1"></iconify-icon>
                                     My Profile</a>
                                 <a class="dropdown-item d-flex" href="../main/page-user-profile.html">
-                                    <iconify-icon icon="solar:card-outline"
-                                        class="text-primary iconify-sm me-2 ms-1"></iconify-icon>
+                                    <iconify-icon icon="solar:card-outline" class="text-primary iconify-sm me-2 ms-1"></iconify-icon>
                                     My Balance</a>
                                 <a class="dropdown-item d-flex" href="../main/app-email.html">
-                                    <iconify-icon icon="solar:inbox-linear"
-                                        class="text-success iconify-sm me-2 ms-1"></iconify-icon>
+                                    <iconify-icon icon="solar:inbox-linear" class="text-success iconify-sm me-2 ms-1"></iconify-icon>
                                     Inbox</a>
-                                <a class="dropdown-item d-flex border-bottom border-top mt-1 py-3"
-                                    href="../main/page-account-settings.html">
-                                    <iconify-icon icon="solar:settings-outline"
-                                        class="text-warning iconify-sm me-2 ms-1"></iconify-icon>
+                                <a class="dropdown-item d-flex border-bottom border-top mt-1 py-3" href="../main/page-account-settings.html">
+                                    <iconify-icon icon="solar:settings-outline" class="text-warning iconify-sm me-2 ms-1"></iconify-icon>
                                     Account Setting</a>
 
                                 <a class="dropdown-item d-flex py-3 pb-2" href="../main/authentication-login.html">
-                                    <iconify-icon icon="solar:login-2-outline"
-                                        class="text-danger iconify-sm me-2 ms-1"></iconify-icon>
+                                    <iconify-icon icon="solar:login-2-outline" class="text-danger iconify-sm me-2 ms-1"></iconify-icon>
                                     Logout</a>
                             </div>
                         </div>
@@ -75,8 +64,7 @@
                     <!-- End User Profile-->
                 </li>
                 <li class="mt-3 pt-3">
-                    <a href="../main/authentication-register.html"
-                        class="btn btn-block bg-primary text-white no-block d-flex align-items-center py-2 px-2 border-0">
+                    <a href="../main/authentication-register.html" class="btn btn-block bg-primary text-white no-block d-flex align-items-center py-2 px-2 border-0">
                         <iconify-icon icon="solar:add-square-linear" class="fs-5"></iconify-icon>
                         <span class="hide-menu ms-2">Create New</span>
                     </a>
@@ -293,8 +281,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <span class="d-flex">
-                            <iconify-icon icon="solar:smart-speaker-minimalistic-line-duotone"
-                                class="fs-6"></iconify-icon>
+                            <iconify-icon icon="solar:smart-speaker-minimalistic-line-duotone" class="fs-6"></iconify-icon>
                         </span>
                         <span class="hide-menu">Ecommerce</span>
                     </a>
@@ -352,8 +339,7 @@
                         <span class="hide-menu">FAQ</span></a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link sidebar-link" href="../main/page-account-settings.html"
-                        aria-expanded="false">
+                    <a class="sidebar-link sidebar-link" href="../main/page-account-settings.html" aria-expanded="false">
                         <iconify-icon icon="solar:user-circle-line-duotone" class="fs-5"></iconify-icon>
                         <span class="hide-menu">Account Settings</span></a>
                 </li>
@@ -365,8 +351,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <span class="d-flex">
-                            <iconify-icon icon="solar:smart-speaker-minimalistic-line-duotone"
-                                class="fs-6"></iconify-icon>
+                            <iconify-icon icon="solar:smart-speaker-minimalistic-line-duotone" class="fs-6"></iconify-icon>
                         </span>
                         <span class="hide-menu">Widgets</span>
                     </a>
@@ -1474,8 +1459,7 @@
                     </ul>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link sidebar-link" href="../main/authentication-maintenance.html"
-                        aria-expanded="false">
+                    <a class="sidebar-link sidebar-link" href="../main/authentication-maintenance.html" aria-expanded="false">
                         <span class="d-flex">
                             <iconify-icon icon="solar:settings-linear" class="fs-6"></iconify-icon>
                         </span>
@@ -1523,8 +1507,7 @@
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link has-arrow sublink" href="javascript:void(0)"
-                                        aria-expanded="false">
+                                    <a class="sidebar-link has-arrow sublink" href="javascript:void(0)" aria-expanded="false">
                                         <div class="round-16 d-flex align-items-center justify-content-center">
                                             <i class="sidebar-icon"></i>
                                         </div>
@@ -1581,8 +1564,7 @@
                             <span class="hide-menu">Chip</span>
                         </div>
                         <div class="hide-menu">
-                            <span
-                                class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center rounded-pill fs-2">9</span>
+                            <span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center rounded-pill fs-2">9</span>
                         </div>
                     </a>
                 </li>
@@ -1594,8 +1576,7 @@
                             </span>
                             <span class="hide-menu">Outlined</span>
                         </div>
-                        <span
-                            class="hide-menu badge rounded-pill border border-primary text-primary fs-2 py-1 px-2">Outline</span>
+                        <span class="hide-menu badge rounded-pill border border-primary text-primary fs-2 py-1 px-2">Outline</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

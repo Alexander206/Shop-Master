@@ -39,8 +39,7 @@
                     <li class="p-1 mb-1 px-2 rounded bg-hover-light-black">
                         <a href="#">
                             <span class="fs-3 h6 mb-0 d-block">Detail</span>
-                            <span
-                                class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
+                            <span class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
                         </a>
                     </li>
                     <li class="p-1 mb-1 px-2 rounded bg-hover-light-black">
@@ -76,8 +75,7 @@
                     <li class="p-1 mb-1 px-2 rounded bg-hover-light-black">
                         <a href="#">
                             <span class="fs-3 h6 mb-0 d-block">Detail</span>
-                            <span
-                                class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
+                            <span class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
                         </a>
                     </li>
                     <li class="p-1 mb-1 px-2 rounded bg-hover-light-black">
