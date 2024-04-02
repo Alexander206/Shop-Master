@@ -3,6 +3,9 @@
 @import "../fonts/tabler-icons/tabler-icons.css";
 @import "../fonts/material-design-iconic-font/css/materialdesignicons.min.css";
 @import "../fonts/flag-icon-css/flag-icon.min.css";
+
+@import url("./personalized/_index.css");
+
 [data-bs-theme="dark"] {
   --bs-body-bg: #001e3c !important;
   --bs-heading-color: #eaeff4 !important;

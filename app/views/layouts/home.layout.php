@@ -7,13 +7,14 @@
 
 <body>
     <div id="main-wrapper">
-        <?php /* importBlock("leftSidebarVertical") */ ?>
+
+        <?php
+        importBlock("preloader");
+        ?>
 
         <div class="page-wrapper">
             <?php
-            importBlock("preloader");
             importBlock("header");
-            /* importBlock("leftSidebarHorizontal"); */
             ?>
 
             <div class="body-wrapper">

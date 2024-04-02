@@ -10,6 +10,7 @@
                 <a class="btn btn-success errorModalBtn" href="" id="errorModalRedirect"></a>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-success errorModalBtn" id="errorModalConfirm">Continuar</button>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>

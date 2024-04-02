@@ -11,7 +11,13 @@ class UserDao extends CrudRepositoryDao implements IUser
 
     public function listUsers(): ?array
     {
-        return parent::getAll();
+        $arrayUsers = parent::getAll();
+
+        foreach ($arrayUsers as &$user) {
+            unset($user['password']);
+        }
+
+        return $arrayUsers;
     }
 
     public function loginUser(string $doc, string $pass): ?array

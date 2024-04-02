@@ -30,21 +30,21 @@ class User implements IUser
     public function loginUser($document, $password): ?array
     {
         $arrayUser = self::$daoInstance->loginUser($document, $password);
-        /* $this->setAttributes($arrayUser); */
+        $this->setAttributes($arrayUser ?? null);
         return $arrayUser;
     }
 
     public function registerUser(array $icomingArrayUser): ?array
     {
         $arrayUser = self::$daoInstance->registerUser($icomingArrayUser);
-        /* $this->setAttributes($arrayUser); */
+        $this->setAttributes($arrayUser ?? null);
         return $arrayUser;
     }
 
     public function updateUser(int $id, array $icomingArrayUser): ?array
     {
         $arrayUser = self::$daoInstance->updateUser($id, $icomingArrayUser);
-        /* $this->setAttributes($arrayUser); */
+        $this->setAttributes($arrayUser ?? null);
         return $arrayUser;
     }
 
@@ -53,18 +53,30 @@ class User implements IUser
         return self::$daoInstance->deleteUser($id);
     }
 
-    /*  private function setAttributes(array $arrayUser)
+    private function setAttributes(array $arrayUser)
     {
-        $this->id = $arrayUser['id'] ?? -1;
-        $this->name = $arrayUser['name'] ?? '';
-        $this->lastName = $arrayUser['last_name'] ?? '';
-        $this->document = $arrayUser['document'] ?? '';
-        $this->countryPhone = $arrayUser['country_phone'] ?? '';
-        $this->phone = $arrayUser['phone'] ?? '';
-        $this->password = $arrayUser['password'] ?? '';
-        $this->roleId = $arrayUser['role_id'] ?? -1;
-        $this->companieId = $arrayUser['companie_id'] ?? -1;
-    } */
+        if ($arrayUser !== null) {
+            $this->id = $arrayUser['id'] ?? -1;
+            $this->name = $arrayUser['name'] ?? '';
+            $this->lastName = $arrayUser['last_name'] ?? '';
+            $this->document = $arrayUser['document'] ?? '';
+            $this->countryPhone = $arrayUser['country_phone'] ?? '';
+            $this->phone = $arrayUser['phone'] ?? '';
+            $this->password = $arrayUser['password'] ?? '';
+            $this->roleId = $arrayUser['role_id'] ?? -1;
+            $this->companieId = $arrayUser['companie_id'] ?? -1;
+        } else {
+            $this->id = -1;
+            $this->name = '';
+            $this->lastName = '';
+            $this->document = '';
+            $this->countryPhone = '';
+            $this->phone = '';
+            $this->password = '';
+            $this->roleId = -1;
+            $this->companieId = -1;
+        }
+    }
 
     /* [Getters and Setters] */
 

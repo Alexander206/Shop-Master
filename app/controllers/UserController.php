@@ -13,44 +13,45 @@ class UserController extends Controller
         $this->userModel = new User($connection);
         $this->publicMethods = [
             "login",
-            "authentication",
-            "register",
-            "recover",
             "loginUser",
-            "registerUser"
+
+            "register",
+            "registerUser",
+
+            "recover",
         ];
     }
 
     /* Views */
 
-    public function home(): void
+    public function home()
     {
-        $this->render('user/index', [], 'home');
+        $this->render('user/admin', [], 'home');
     }
 
-    public function login(): void
+    public function login()
     {
         $this->render('user/login', [], 'site');
     }
 
-    public function register(): void
+    public function register()
     {
         $this->render('user/register', [], 'site');
     }
 
-    public function recover(): void
+    public function recover()
     {
         $this->render('user/recover', [], 'site');
     }
 
-    public function registerCompany(): void
+    public function config()
     {
-        echo 'Estoy registrando la compañia';
+        $this->render('user/config', [], 'home');
     }
 
-    public function config(): void
+    public function chat()
     {
-        echo "Estoy en la configuración";
+        $this->render('user/chat', [], 'home');
     }
 
     /* Endpoinds */
@@ -61,6 +62,24 @@ class UserController extends Controller
         $users = $this->userModel->listUsers();
         $res->success = true;
         $res->result = $users;
+
+        echo json_encode($res);
+    }
+
+    public function getUser()
+    {
+        $res = new Result();
+        $sessionUser = new SessionUser();
+        $user = $sessionUser->getUserData();
+
+        if ($user !== null && $sessionUser->isLoggedIn()) {
+            $res->success = true;
+            $res->message = "Usuario autenticado";
+            $res->result = $user;
+        } else {
+            $res->success = false;
+            $res->message = "Usuario no autenticado";
+        }
 
         echo json_encode($res);
     }
@@ -102,11 +121,23 @@ class UserController extends Controller
         if ($user !== null) {
             $res->success = true;
             $res->message = "El Registro fue exitoso";
-            $res->result = $body;
+            $res->result = $user;
         } else {
             $res->success = false;
             $res->message = "El registro falló";
         }
+
+        echo json_encode($res);
+    }
+
+    public function logout()
+    {
+        $res = new Result();
+        $sessionUser = new SessionUser();
+
+        $sessionUser->logout();
+        $res->success = true;
+        $res->message = "Sesión cerrada";
 
         echo json_encode($res);
     }

@@ -9,8 +9,6 @@
 
     <!-- Core Css -->
     <link rel="stylesheet" href="<?= URL_PATH ?>/assets/css/styles.css" />
-    <link rel="stylesheet" href="<?= URL_PATH ?>/assets/css/personalized/index.css" />
-    <link rel="stylesheet" href="<?= URL_PATH ?>/assets/libs/prismjs/themes/prism-okaidia.min.css" />
 
     <title>
         <?= NAME_SITE ?>

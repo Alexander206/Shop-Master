@@ -84,6 +84,8 @@ function alertModal(title, text, redirect) {
     const $modaltitle = $modalError.querySelector("#errorModalTitle");
     const $modaltext = $modalError.querySelector("#errorModalText");
     const $modalRedirect = $modalError.querySelector("#errorModalRedirect");
+    const $modalConfirm = $modalError.querySelector("#errorModalConfirm");
+    $modalConfirm.style.display = "none";
 
     if (redirect) {
         $modalRedirect.style.display = "block";
@@ -92,6 +94,17 @@ function alertModal(title, text, redirect) {
     } else {
         $modalRedirect.style.display = "none";
     }
+
+    $modaltitle.innerHTML = title;
+    $modaltext.innerHTML = text;
+    $("#errorModal").modal("show");
+}
+
+function warningModal(title, text) {
+    const $modaltitle = $modalError.querySelector("#errorModalTitle");
+    const $modaltext = $modalError.querySelector("#errorModalText");
+    const $modalRedirect = $modalError.querySelector("#errorModalRedirect");
+    $modalRedirect.style.display = "none"
 
     $modaltitle.innerHTML = title;
     $modaltext.innerHTML = text;

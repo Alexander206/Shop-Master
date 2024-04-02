@@ -21,3 +21,9 @@ define("PAGES_PATH", $pagesPath);
 define("PAGE_HOME", $pagesPath . "home");
 define("PAGE_USER", $pagesPath . "user");
 define("PAGE_PRODUCT", $pagesPath . "product");
+
+/* partials */
+
+$partialsPath = "/assets/js/partials/";
+
+define("PARTIALS_PATH", $partialsPath);

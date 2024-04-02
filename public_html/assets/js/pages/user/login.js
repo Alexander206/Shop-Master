@@ -20,8 +20,6 @@ const fetchApiLogin = async (document, password) => {
     let res = await fetch(`${URL_PATH}/user/loginUser`, options);
     let response = await res.json();
 
-    console.log(response);
-
     if (!response.success) {
         title = "🔴 Error";
         text = `Error al iniciar sesión. Por favor, asegúrate de que tu docuemnto y contraseña sean correctos. </br> El servicio a retornado: <strong>${response.message}</strong>`;
