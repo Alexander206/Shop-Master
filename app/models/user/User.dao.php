@@ -9,7 +9,7 @@ class UserDao extends CrudRepositoryDao implements IUser
         parent::__construct($table, $connection);
     }
 
-    public function listUsers(): ?array
+    public function list(): ?array
     {
         $arrayUsers = parent::getAll();
 
@@ -20,7 +20,16 @@ class UserDao extends CrudRepositoryDao implements IUser
         return $arrayUsers;
     }
 
-    public function loginUser(string $doc, string $pass): ?array
+    public function getByDoc(int $doc): ?array
+    {
+        $user = parent::getByAttribute("document", $doc);
+        if ($user !== null) {
+            unset($user['password']);
+        }
+        return $user;
+    }
+
+    public function login(string $doc, string $pass): ?array
     {
         $user = parent::getByAttribute("document", $doc);
 
@@ -32,7 +41,7 @@ class UserDao extends CrudRepositoryDao implements IUser
         }
     }
 
-    public function registerUser(array $user): ?array
+    public function register(array $user): ?array
     {
         $user['password'] = password_hash($user['password'], PASSWORD_DEFAULT);
 
@@ -45,19 +54,19 @@ class UserDao extends CrudRepositoryDao implements IUser
         }
     }
 
-    public function updateUser(int $id, array $user): ?array
+    public function update(int $id, array $user): ?array
     {
         $password = $user['password'];
         $user['password'] = password_hash($password, PASSWORD_DEFAULT);
 
         if (parent::updateById($id, $user)) {
-            return $this->loginUser($user['document'], $password);
+            return $this->login($user['document'], $password);
         } else {
             return null;
         }
     }
 
-    public function deleteUser(int $id): bool
+    public function delete(int $id): bool
     {
         return parent::deleteById($id);
     }

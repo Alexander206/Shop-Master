@@ -15,7 +15,7 @@
     importBlock("scripts");
     ?>
 
-    <script src="<?= URL_PATH ?><?= PAGES_PATH ?>/main.js"></script>
+    <script src="<?= PAGES_PATH ?>/main.js"></script>
 </body>
 
 </html>

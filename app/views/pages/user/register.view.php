@@ -59,8 +59,6 @@
                                             <datalist id="optionsList"></datalist>
                                         </div>
                                     </div>
-
-
                                 </div>
 
                                 <div class="mb-3">
@@ -89,4 +87,4 @@
     </div>
 </div>
 
-<script src="<?= URL_PATH ?><?= PAGE_USER ?>/register.js"></script>
+<script src="<?= PAGE_USER ?>/register.js"></script>

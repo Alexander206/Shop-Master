@@ -34,13 +34,13 @@
 
                             <form id="loginForm" method="post">
                                 <div class="mb-3">
-                                    <label for="inputDocument" class="form-label">Numero de documento</label>
-                                    <input id="inputDocument" class="form-control" name="inputDocument" type="doc" required>
+                                    <label for="document" class="form-label">Numero de documento</label>
+                                    <input id="document" class="form-control" name="document" type="doc" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="inputPassword" class="form-label">Contraseña</label>
-                                    <input id="inputPassword" class="form-control" name="inputPassword" type="password" required>
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <input id="password" class="form-control" name="password" type="password" required autocomplete="new-password">
                                 </div>
 
                                 <div class="d-flex align-items-center justify-content-between mb-4">
@@ -60,4 +60,43 @@
     </div>
 </div>
 
-<script src="<?= URL_PATH ?><?= PAGE_USER ?>/login.js"></script>
+<script>
+    const $loginForm = document.getElementById("loginForm");
+
+    $loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+
+        if (document !== null && password !== null) {
+            fetchApiLogin(formData);
+        }
+    });
+
+    const fetchApiLogin = async (data) => {
+        const options = {
+            method: "POST",
+            body: data,
+        };
+
+        let res = await fetch(`<?= URL_PATH ?>/user/authenticate`, options);
+        let response = await res.json();
+
+        if (!response.success) {
+            title = "🔴 Error";
+            text = `Error al iniciar sesión. Por favor, asegúrate de que tu documento y contraseña sean correctos. </br></br> El servicio a retornado: <strong>${response.message}</strong>`;
+
+            alertModal(title, text);
+        } else {
+            title = "🟢 Éxito";
+            text = `¡Inicio de sesión exitoso! ¡Bienvenido de vuelta!. El servicio a retornado: <strong>${response.message}</strong>`;
+            redirect = {
+                href: `<?= URL_PATH ?>/`,
+                text: "Continuar",
+            };
+
+            alertModal(title, text, redirect);
+        }
+    };
+</script>

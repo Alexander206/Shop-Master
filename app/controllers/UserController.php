@@ -13,16 +13,16 @@ class UserController extends Controller
         $this->userModel = new User($connection);
         $this->publicMethods = [
             "login",
-            "loginUser",
+            "authenticate",
 
             "register",
-            "registerUser",
+            "create",
 
             "recover",
         ];
     }
 
-    /* Views */
+    # ----- Views ----- #
 
     public function home()
     {
@@ -54,46 +54,121 @@ class UserController extends Controller
         $this->render('user/chat', [], 'home');
     }
 
-    /* Endpoinds */
+    # ----- Endpoinds ----- #
 
-    public function listUser()
+    public function list()
     {
+        $this->validateRequestMethod("GET");
+
         $res = new Result();
-        $users = $this->userModel->listUsers();
+        $users = $this->userModel->list();
         $res->success = true;
         $res->result = $users;
 
         echo json_encode($res);
     }
 
-    public function getUser()
+    public function get()
     {
-        $res = new Result();
-        $sessionUser = new SessionUser();
-        $user = $sessionUser->getUserData();
+        $this->validateRequestMethod("GET");
 
-        if ($user !== null && $sessionUser->isLoggedIn()) {
-            $res->success = true;
-            $res->message = "Usuario autenticado";
-            $res->result = $user;
+        $res = new Result();
+        $userDoc = isset($_GET['id']) ? $_GET['id'] : null;
+
+        if (isset($userDoc)) {
+            $user = $this->userModel->getByDoc($userDoc);
+
+            if ($user !== null) {
+                $res->success = true;
+                $res->message = "Usuario encontrado";
+                $res->result = $user;
+            } else {
+                $res->success = false;
+                $res->message = "Usuario no encontrado";
+            }
         } else {
-            $res->success = false;
-            $res->message = "Usuario no autenticado";
+            $sessionUser = new SessionUser();
+            $user = $sessionUser->getUserData();
+
+            if ($user !== null && $sessionUser->isLoggedIn()) {
+                $res->success = true;
+                $res->message = "Usuario autenticado";
+                $res->result = $user;
+            } else {
+                $res->success = false;
+                $res->message = "Usuario no autenticado";
+            }
         }
 
         echo json_encode($res);
     }
 
-    public function loginUser()
+    public function edit()
     {
+        $this->validateRequestMethod("PUT");
+
         $res = new Result();
-        $postData = file_get_contents('php://input');
-        $body = json_decode($postData, true);
+        /* $postData = file_get_contents('php://input');
+        $id = json_decode($postData, true)['id'];
+        $body = json_decode($postData, true)['user'];
 
-        $document = $body["document"];
-        $password = $body["password"];
+        $user = $this->userModel->updateUser($id, $body);
 
-        $user = $this->userModel->loginUser($document, $password);
+        if ($user !== null) {
+            $res->success = true;
+            $res->message = "La edición fue exitosa";
+            $res->result = $body;
+        } else {
+            $res->success = false;
+            $res->message = "La edición falló";
+        }
+ */
+
+        $res->success = true;
+        $res->message = "La edición fue exitosa";
+        $res->result = $_POST;
+
+        echo json_encode($res);
+    }
+
+    public function delete()
+    {
+        $this->validateRequestMethod("DELETE");
+
+        $res = new Result();
+        $sessionUser = new SessionUser();
+
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        $user = $sessionUser->getUserData();
+        $UserDeleted = false;
+
+        if ($user["document"] === $id) {
+            $UserDeleted = $this->userModel->delete($id);
+        }
+
+        if ($UserDeleted) {
+            $res->success = true;
+            $res->message = "La eliminación fue exitosa";
+            $res->result = $user["document"] .  $id;
+        } else {
+            $res->success = false;
+            $res->message = "La eliminación falló";
+            $res->result = $user["document"] .  $id;
+        }
+
+        echo json_encode($res);
+    }
+
+    public function authenticate()
+    {
+        $this->validateRequestMethod("POST");
+
+        $res = new Result();
+
+        $document = $_POST["document"];
+        $password = $_POST["password"];
+
+        $user = $this->userModel->login($document, $password);
 
         if ($user !== null) {
             $sessionUser = new SessionUser();
@@ -110,13 +185,12 @@ class UserController extends Controller
         echo json_encode($res);
     }
 
-    public function registerUser()
+    public function create()
     {
         $res = new Result();
-        $postData = file_get_contents('php://input');
-        $body = json_decode($postData, true)['user'];
+        $body = $_POST['user'];
 
-        $user = $this->userModel->registerUser($body);
+        $user = $this->userModel->register($body);
 
         if ($user !== null) {
             $res->success = true;
@@ -138,46 +212,6 @@ class UserController extends Controller
         $sessionUser->logout();
         $res->success = true;
         $res->message = "Sesión cerrada";
-
-        echo json_encode($res);
-    }
-
-    public function editUser()
-    {
-        $res = new Result();
-        $postData = file_get_contents('php://input');
-        $id = json_decode($postData, true)['id'];
-        $body = json_decode($postData, true)['user'];
-
-        $user = $this->userModel->updateUser($id, $body);
-
-        if ($user !== null) {
-            $res->success = true;
-            $res->message = "La edición fue exitosa";
-            $res->result = $body;
-        } else {
-            $res->success = false;
-            $res->message = "La edición falló";
-        }
-
-        echo json_encode($res);
-    }
-
-    public function deleteUser()
-    {
-        $res = new Result();
-        $postData = file_get_contents('php://input');
-        $id = json_decode($postData, true)['id'];
-
-        $user = $this->userModel->deleteUser($id);
-
-        if ($user) {
-            $res->success = true;
-            $res->message = "La eliminación fue exitosa";
-        } else {
-            $res->success = false;
-            $res->message = "La eliminación falló";
-        }
 
         echo json_encode($res);
     }

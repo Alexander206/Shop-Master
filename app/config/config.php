@@ -17,13 +17,7 @@ define("NAME_SITE", "Shop Master");
 
 $pagesPath = "/assets/js/pages/";
 
-define("PAGES_PATH", $pagesPath);
-define("PAGE_HOME", $pagesPath . "home");
-define("PAGE_USER", $pagesPath . "user");
-define("PAGE_PRODUCT", $pagesPath . "product");
-
-/* partials */
-
-$partialsPath = "/assets/js/partials/";
-
-define("PARTIALS_PATH", $partialsPath);
+define("PAGES_PATH", URL_PATH . $pagesPath);
+define("PAGE_HOME", URL_PATH . $pagesPath . "home");
+define("PAGE_USER", URL_PATH . $pagesPath . "user");
+define("PAGE_PRODUCT", URL_PATH . $pagesPath . "product");

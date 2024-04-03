@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async (event) => {
     const $table = document.getElementById("tableUsersAdmin").querySelector("tbody");
 
-    const response = await fetch(`${URL_PATH}/user/listUser`);
+    const response = await fetch(`${URL_PATH}/user/list`);
     const res = await response.json();
 
     console.log(res.result);

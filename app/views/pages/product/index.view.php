@@ -10,5 +10,5 @@
         <button type="submit">Agregar producto</button>
     </form>
 
-    <script src="<?= URL_PATH ?><?= PAGE_PRODUCT ?>/add.js"></script>
+    <script src="<?= PAGE_PRODUCT ?>/add.js"></script>
 </h1>
