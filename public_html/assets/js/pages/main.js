@@ -100,11 +100,16 @@ function alertModal(title, text, redirect) {
     $("#errorModal").modal("show");
 }
 
-function warningModal(title, text) {
+function warningModal(title, text, btnValue) {
     const $modaltitle = $modalError.querySelector("#errorModalTitle");
     const $modaltext = $modalError.querySelector("#errorModalText");
     const $modalRedirect = $modalError.querySelector("#errorModalRedirect");
-    $modalRedirect.style.display = "none"
+    const $modalConfirm = $modalError.querySelector("#errorModalConfirm");
+    $modalRedirect.style.display = "none";
+
+    if (btnValue) {
+        $modalConfirm.value = btnValue;
+    }
 
     $modaltitle.innerHTML = title;
     $modaltext.innerHTML = text;

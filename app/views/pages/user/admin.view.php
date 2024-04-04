@@ -8,7 +8,7 @@
             <div class="col-lg-4">
                 <div class="card">
                     <div class="card-body p-4 d-flex align-items-center gap-3">
-                        <img src="../assets/images/profile/user-0.png" alt="" class="rounded-circle" width="40" height="40">
+                        <img src="<?= URL_PATH ?>/assets/images/profile/user-0.png" alt="" class="rounded-circle" width="40" height="40">
 
                         <div>
                             <h5 class="fw-semibold mb-0">Nuevo Usuario</h5>
@@ -58,10 +58,20 @@
     document.addEventListener("DOMContentLoaded", async (event) => {
         const $table = document.getElementById("tableUsersAdmin").querySelector("tbody");
 
-        const response = await fetch(`${URL_PATH}/user/list`);
+        const response = await fetch(`<?= URL_PATH ?>/user/list`);
         const res = await response.json();
 
+        const companiesRes = await fetch(`<?= URL_PATH ?>/company/list`);
+        const companiesResponse = await companiesRes.json();
+
+        const rolsRes = await fetch(`<?= URL_PATH ?>/rol/list`);
+        const rolsResponse = await rolsRes.json();
+
         const element = res.result.map((item) => {
+
+            const companie = companiesResponse.result.find((companie) => companie.id === item.companie_id);
+            const rol = rolsResponse.result.find((rol) => rol.id === item.role_id);
+
             return `
             <tr>
                 <td>
@@ -70,10 +80,10 @@
 
                 <td>
                     <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-1.jpg" class="rounded-circle" width="40" height="40" />
+                        <img src="<?= URL_PATH ?>${item.image}" class="rounded-circle" width="40" height="40" />
                         <div class="ms-3">
                             <h6 class="fs-4 fw-semibold mb-0">${item.name} ${item.last_name}</h6>
-                            <span class="fw-normal">${item.companie_id}</span>
+                            <span class="fw-normal">${companie.name}</span>
                         </div>
                     </div>
                 </td>
@@ -84,13 +94,12 @@
 
                 <td>
                     <div class="d-flex align-items-center gap-2">
-                        <span class="badge text-bg-primary rounded-3 fw-semibold fs-2">${item.role_id}</span>
-                        <span class="badge text-bg-secondary rounded-3 fw-semibold fs-2">${item.role_id}</span>
+                        <span class="badge  ${rol.id === 1 ? "text-bg-primary" : "text-bg-secondary"} rounded-3 fw-semibold fs-2">${rol.type_role}</span>
                     </div>
                 </td>
 
                 <td>
-                    <p class="mb-0 fw-normal fs-4">Elite Admin</p>
+                    <p class="mb-0 fw-normal fs-4">${companiesResponse.result[item.companie_id].address}</p>
                 </td>
 
                 <td>
@@ -107,7 +116,7 @@
                                 <a class="dropdown-item d-flex align-items-center gap-3" href="/user/config?id=${item.document}"><i class="fs-4 ti ti-edit"></i>Edit</a>
                             </li>
                             <li>
-                                <button class="dropdown-item d-flex align-items-center gap-3" onclick="deleteUser(${item.id})"><i class="fs-4 ti ti-trash"></i>Delete</button>
+                                <button class="dropdown-item d-flex align-items-center gap-3" onclick="deleteUser(${item.document})"><i class="fs-4 ti ti-trash"></i>Delete</button>
                             </li>
                         </ul>
                     </div>
@@ -115,17 +124,15 @@
             </tr>`;
         });
 
-        $table.innerHTML = element;
-    });
+        $table.innerHTML = element.join("");
 
-    async function deleteUser(id) {
-        title = "🟡 Alerta";
-        text = `Seguro que deseas eliminar el usuario con el ID: <strong>${id}</strong>`;
+        const btnConfirn = document.getElementById("errorModalConfirm");
 
-        warningModal(title, text);
+        btnConfirn.addEventListener("click", async (event) => {
 
-        document.getElementById("errorModalConfirm").addEventListener("click", async () => {
-            const res = await fetch(`${URL_PATH}/user/delete?id=${id}`, {
+            const doc = event.target.value;
+
+            const res = await fetch(`<?= URL_PATH ?>/user/delete?doc=${doc}`, {
                 method: "DELETE"
             });
 
@@ -133,19 +140,29 @@
 
             if (!response.success) {
                 title = "🔴 Error";
-                text = `Error al elimminar el usuario. Por favor, inténtalo de nuevo. </br> El servicio a retornado: <strong>${response.message}</strong>`;
+                text = `Error al elimminar el usuario con Documento ${response.result}. Por favor, inténtalo de nuevo. </br> </br> El servicio a retornado: <strong>${response.message}</strong>`;
 
                 alertModal(title, text);
             } else {
                 title = "🟢 Éxito";
-                text = `¡Eliminación exitosa! El usuario se elimino correctamente. </br> </br> El servicio a retornado: <strong>${response.message}</strong>`;
+                text = `¡Eliminación exitosa! El usuario con Documento ${response.result} se elimino correctamente. </br> </br> El servicio a retornado: <strong>${response.message}</strong>`;
                 redirect = {
-                    href: `${URL_PATH}/user`,
+                    href: `<?= URL_PATH ?>/user`,
                     text: "Refrescar la página",
                 };
 
                 alertModal(title, text, redirect);
             }
         });
+    });
+
+    async function deleteUser(doc) {
+        const btnConfirn = document.getElementById("errorModalConfirm");
+        btnConfirn.style.display = "block";
+
+        title = "🟡 Alerta";
+        text = `Seguro que deseas eliminar el usuario con el Documento: <strong>${doc}</strong>`;
+
+        warningModal(title, text, doc);
     }
 </script>

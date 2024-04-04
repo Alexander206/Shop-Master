@@ -37,8 +37,8 @@ class User implements IUser
         return self::$daoInstance->update($id, $icomingArrayUser);
     }
 
-    public function delete(int $id): bool
+    public function delete(int $doc): bool
     {
-        return self::$daoInstance->delete($id);
+        return self::$daoInstance->delete($doc);
     }
 }

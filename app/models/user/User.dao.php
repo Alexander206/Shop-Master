@@ -66,8 +66,9 @@ class UserDao extends CrudRepositoryDao implements IUser
         }
     }
 
-    public function delete(int $id): bool
+    public function delete(int $doc): bool
     {
-        return parent::deleteById($id);
+        $user = parent::getByAttribute("document", $doc);
+        return parent::deleteById($user["id"]);
     }
 }

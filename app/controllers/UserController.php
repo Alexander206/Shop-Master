@@ -138,22 +138,19 @@ class UserController extends Controller
         $res = new Result();
         $sessionUser = new SessionUser();
 
-        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        $doc = isset($_GET['doc']) ? $_GET['doc'] : null;
         $user = $sessionUser->getUserData();
-        $UserDeleted = false;
 
-        if ($user["document"] === $id) {
-            $UserDeleted = $this->userModel->delete($id);
-        }
+        $UserDeleted = $user["document"] !== $doc ? $this->userModel->delete($doc) : false;
 
         if ($UserDeleted) {
             $res->success = true;
             $res->message = "La eliminación fue exitosa";
-            $res->result = $user["document"] .  $id;
+            $res->result = $doc;
         } else {
             $res->success = false;
             $res->message = "La eliminación falló";
-            $res->result = $user["document"] .  $id;
+            $res->result = $doc;
         }
 
         echo json_encode($res);
