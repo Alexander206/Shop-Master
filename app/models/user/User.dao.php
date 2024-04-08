@@ -29,6 +29,41 @@ class UserDao extends CrudRepositoryDao implements IUser
         return $user;
     }
 
+    public function update(array $icomingUser): ?array
+    {
+        $doc = $icomingUser["document"];
+        $userExist = parent::getByAttribute("document", $doc);
+
+        $userUpdate = parent::updateById($userExist["id"], $icomingUser);
+
+        if ($userUpdate) {
+            unset($userUpdate['password']);
+            return $userUpdate;
+        } else {
+            return null;
+        }
+    }
+
+    public function updateImage(int $doc, array $image): ?array
+    {
+        $userExist = parent::getByAttribute("document", $doc);
+
+        $targetPath = __DIR__ . '/../../../public_html/assets/images/profile/' . $image['name'];
+        $imagePath = '/assets/images/profile/' . $image['name'];
+
+        move_uploaded_file($image['tmp_name'], $targetPath);
+        $data = ['image' => $imagePath];
+
+        $userUpdate = parent::updateById($userExist["id"], $data);
+
+        if ($userUpdate) {
+            unset($userUpdate['password']);
+            return $userUpdate;
+        } else {
+            return null;
+        }
+    }
+
     public function login(string $doc, string $pass): ?array
     {
         $user = parent::getByAttribute("document", $doc);
@@ -41,26 +76,14 @@ class UserDao extends CrudRepositoryDao implements IUser
         }
     }
 
-    public function register(array $user): ?array
+    public function register(array $icomingUser): ?array
     {
-        $user['password'] = password_hash($user['password'], PASSWORD_DEFAULT);
+        $icomingUser['password'] = password_hash($icomingUser['password'], PASSWORD_DEFAULT);
 
-        if (!parent::getByAttribute("document", $user['document'])) {
-            $newUser = parent::create($user);
+        if (!parent::getByAttribute("document", $icomingUser['document'])) {
+            $newUser = parent::create($icomingUser);
             unset($newUser['password']);
             return $newUser;
-        } else {
-            return null;
-        }
-    }
-
-    public function update(int $id, array $user): ?array
-    {
-        $password = $user['password'];
-        $user['password'] = password_hash($password, PASSWORD_DEFAULT);
-
-        if (parent::updateById($id, $user)) {
-            return $this->login($user['document'], $password);
         } else {
             return null;
         }

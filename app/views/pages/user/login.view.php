@@ -60,6 +60,9 @@
     </div>
 </div>
 
+<script src="<?= URL_PATH ?>/assets/libs/inputmask/dist/jquery.inputmask.min.js"></script>
+<script src="<?= URL_PATH ?>/assets/js/forms/mask.init.js"></script>
+
 <script>
     const $loginForm = document.getElementById("loginForm");
 
@@ -67,7 +70,6 @@
         event.preventDefault();
 
         const formData = new FormData(this);
-
 
         if (document !== null && password !== null) {
             fetchApiLogin(formData);

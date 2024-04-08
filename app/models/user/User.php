@@ -22,19 +22,24 @@ class User implements IUser
         return self::$daoInstance->getByDoc($doc);
     }
 
+    public function update(array $icomingUser): ?array
+    {
+        return self::$daoInstance->update($icomingUser);
+    }
+
+    public function updateImage(int $doc, array $image): ?array
+    {
+        return self::$daoInstance->updateImage($doc, $image);
+    }
+
     public function login($document, $password): ?array
     {
         return self::$daoInstance->login($document, $password);
     }
 
-    public function register(array $icomingArrayUser): ?array
+    public function register(array $icomingUser): ?array
     {
-        return self::$daoInstance->register($icomingArrayUser);
-    }
-
-    public function update(int $id, array $icomingArrayUser): ?array
-    {
-        return self::$daoInstance->update($id, $icomingArrayUser);
+        return self::$daoInstance->register($icomingUser);
     }
 
     public function delete(int $doc): bool
