@@ -99,7 +99,7 @@
                 </td>
 
                 <td>
-                    <p class="mb-0 fw-normal fs-4">${companiesResponse.result[item.companie_id].address}</p>
+                    <p class="mb-0 fw-normal fs-4">${companiesResponse.result[item.companie_id - 1].address}</p>
                 </td>
 
                 <td>

@@ -72,6 +72,11 @@
                                                 <label for="document" class="form-label fw-semibold">Documento</label>
                                                 <input type="text" class="form-control" name="document" id="document" placeholder="" disabled />
                                             </div>
+
+                                            <div>
+                                                <label for="address" class="form-label fw-semibold">Dirección</label>
+                                                <input type="text" class="form-control" name="address" id="address" placeholder="" disabled />
+                                            </div>
                                         </div>
 
                                         <div class="col-lg-6">
@@ -97,12 +102,10 @@
                                                 <label class="form-label fw-semibold">Compañia</label>
                                                 <select class="form-select" name="companie_id" id="companie_id" aria-label="Default select example"></select>
                                             </div>
-                                        </div>
 
-                                        <div class="col-12">
-                                            <div>
-                                                <label for="address" class="form-label fw-semibold">Dirección</label>
-                                                <input type="text" class="form-control" name="address" id="address" placeholder="" disabled />
+                                            <div class="mb-4">
+                                                <label class="form-label fw-semibold">Rol</label>
+                                                <select class="form-select" name="role_id" id="role_id" aria-label="Default select example"></select>
                                             </div>
                                         </div>
                                     </div>
@@ -162,6 +165,11 @@
 
             const companiesRes = await fetch(`<?= URL_PATH ?>/company/list`);
             const companiesResponse = await companiesRes.json();
+
+            const rolesRes = await fetch(`<?= URL_PATH ?>/rol/list`);
+            const rolesResponse = await rolesRes.json();
+
+            console.log(rolesResponse);
 
             let user;
             let userResponse;
@@ -299,6 +307,17 @@
                 }
             });
 
+            const optionsRole = rolesResponse.result.map((item) => {
+
+                console.log(item.id, user.role_id);
+
+                if (item.id === user.role_id) {
+                    return `<option value="${item.id}" selected>${item.type_role}</option>`;
+                } else {
+                    return `<option value="${item.id}">${item.type_role}</option>`;
+                }
+            });
+
             const $inputName = $dataUserForm.querySelector("#name");
             const $inputLastname = $dataUserForm.querySelector("#last_name");
             const $inputDocument = $dataUserForm.querySelector("#document");
@@ -306,6 +325,7 @@
             const $inputCountryImage = $dataUserForm.querySelector("#country_image");
             const $inputPhone = $dataUserForm.querySelector("#phone");
             const $inputCompani = $dataUserForm.querySelector("#companie_id");
+            const $imputRoleId = $dataUserForm.querySelector("#role_id");
             const $inputAddress = $dataUserForm.querySelector("#address");
 
             $inputName.value = user.name;
@@ -315,6 +335,7 @@
             $inputCountryImage.src = selectedCountry.image;
             $inputPhone.value = user.phone;
             $inputCompani.innerHTML = optionsCompany.join("");
+            $imputRoleId.innerHTML = optionsRole.join("");
             $inputAddress.value = selectedCompany.address;
 
             // Submit
@@ -323,6 +344,7 @@
                 event.preventDefault();
 
                 const arrayIdsCompanies = companiesResponse.result.map(item => item.id);
+                const arrayIdsRoles = rolesResponse.result.map(item => item.id);
 
                 const user = {
                     name: validateInput(event.target.name.value),
@@ -331,6 +353,7 @@
                     country_phone: validateInput(event.target.country_phone.value),
                     phone: validatePhoneNumber(event.target.phone.value),
                     companie_id: validateInputId(event.target.companie_id.value, arrayIdsCompanies),
+                    role_id: validateInputId(event.target.role_id.value, arrayIdsRoles),
                 }
 
                 const messages = {
