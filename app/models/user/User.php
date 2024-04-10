@@ -37,13 +37,18 @@ class User implements IUser
         return self::$daoInstance->login($document, $password);
     }
 
-    public function register(array $icomingUser): ?array
+    public function register(array $icomingUser, array $image): ?array
     {
-        return self::$daoInstance->register($icomingUser);
+        return self::$daoInstance->register($icomingUser, $image);
     }
 
     public function delete(int $doc): bool
     {
         return self::$daoInstance->delete($doc);
+    }
+
+    public function changePassword(int $document, string $oldPassword, string $newPassword): ?bool
+    {
+        return self::$daoInstance->changePassword($document,  $oldPassword,  $newPassword);
     }
 }

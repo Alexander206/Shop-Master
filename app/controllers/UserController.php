@@ -36,7 +36,7 @@ class UserController extends Controller
 
     public function register()
     {
-        $this->render('user/register', [], 'site');
+        $this->render('user/register', [], 'home');
     }
 
     public function recover()
@@ -184,14 +184,42 @@ class UserController extends Controller
 
     public function create()
     {
-        $res = new Result();
-        $body = $_POST['user'];
+        $this->validateRequestMethod("POST");
 
-        $user = $this->userModel->register($body);
+        $res = new Result();
+        $body = json_decode($_POST['user'], true);
+        $files = $_FILES['image'];
+
+        $user = $this->userModel->register($body, $files);
 
         $res->success = $user !== null;
         $res->message = $user !== null ? "El Registro fue exitoso" : "El registro falló";
         $res->result = $user;
+
+        echo json_encode($res);
+    }
+
+    public function changePassword()
+    {
+        $this->validateRequestMethod("PATCH");
+
+        $res = new Result();
+        $sessionUser = new SessionUser();
+        $json_data = file_get_contents("php://input");
+        $data = json_decode($json_data, true);
+
+        $document = $data["document"];
+        $oldPassword = $data["old_password"];
+        $newPassword = $data["new_password"];
+
+        $user = $this->userModel->changePassword($document, $oldPassword, $newPassword);
+
+        if ($user !== null) {
+            $sessionUser->logout();
+        }
+
+        $res->success = $user !== null;
+        $res->message = $user !== null ? "Contraseña cambiada" : "La contraseña no se pudo cambiar, verifica que la contraseña actual sea correcta";
 
         echo json_encode($res);
     }

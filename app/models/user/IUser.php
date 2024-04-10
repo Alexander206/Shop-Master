@@ -8,5 +8,6 @@ interface IUser
     public function updateImage(int $doc, array $image): ?array;
     public function delete(int $id): bool;
     public function login(string $document, string $password): ?array;
-    public function register(array $icomingUser): ?array;
+    public function register(array $icomingUser, array $image): ?array;
+    public function changePassword(int $document, string $oldPassword, string $newPassword): ?bool;
 }

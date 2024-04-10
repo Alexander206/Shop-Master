@@ -76,8 +76,13 @@ class UserDao extends CrudRepositoryDao implements IUser
         }
     }
 
-    public function register(array $icomingUser): ?array
+    public function register(array $icomingUser, array $image): ?array
     {
+        $targetPath = __DIR__ . '/../../../public_html/assets/images/profile/' . $image['name'];
+        $imagePath = '/assets/images/profile/' . $image['name'];
+        move_uploaded_file($image['tmp_name'], $targetPath);
+
+        $icomingUser['image'] = $imagePath;
         $icomingUser['password'] = password_hash($icomingUser['password'], PASSWORD_DEFAULT);
 
         if (!parent::getByAttribute("document", $icomingUser['document'])) {
@@ -93,5 +98,17 @@ class UserDao extends CrudRepositoryDao implements IUser
     {
         $user = parent::getByAttribute("document", $doc);
         return parent::deleteById($user["id"]);
+    }
+
+    public function changePassword(int $document, string $oldPassword, string $newPassword): ?bool
+    {
+        $user = parent::getByAttribute("document", $document);
+
+        if (password_verify($oldPassword, $user['password'])) {
+            $data = ['password' => password_hash($newPassword, PASSWORD_DEFAULT)];
+            return parent::updateById($user["id"], $data) !== null ? true : false;
+        } else {
+            return null;
+        }
     }
 }

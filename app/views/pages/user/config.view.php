@@ -169,8 +169,6 @@
             const rolesRes = await fetch(`<?= URL_PATH ?>/rol/list`);
             const rolesResponse = await rolesRes.json();
 
-            console.log(rolesResponse);
-
             let user;
             let userResponse;
 
@@ -308,9 +306,6 @@
             });
 
             const optionsRole = rolesResponse.result.map((item) => {
-
-                console.log(item.id, user.role_id);
-
                 if (item.id === user.role_id) {
                     return `<option value="${item.id}" selected>${item.type_role}</option>`;
                 } else {
@@ -385,18 +380,29 @@
             $passwordUserForm.addEventListener("submit", async function(event) {
                 event.preventDefault();
 
-                let formData = new FormData(this);
+                const data = {
+                    document: user.document,
+                    old_password: validatePassword($inputCurrentPassword.value),
+                    new_password: validatePassword($inputPassword.value),
+                };
 
-                try {
-                    let response = await fetch(`<?= URL_PATH ?>/user/edit`, {
-                        method: "POST",
-                        body: formData,
-                    });
+                const messages = {
+                    success: {
+                        title: "🟢 Éxito",
+                        text: `Actualización de la contraseña fue exitosa.`,
+                        redirect: {
+                            href: `<?= URL_PATH ?>/user/config?id=${user.document}`,
+                            text: "Recargar",
+                        }
+                    },
+                    failure: {
+                        "title": "🔴 Error",
+                        "text": `Problemas en la actualización de la contraseña.`
+                    },
+                };
 
-                    let responseText = await response.text();
-                    console.log(responseText);
-                } catch (error) {
-                    console.error("Error:", error);
+                if (checkPasswordMatch($inputPassword.value, $inputConfirmPassword.value)) {
+                    fetchData(`<?= URL_PATH ?>/user/changePassword`, "PATCH", messages, data)
                 }
             });
         });
