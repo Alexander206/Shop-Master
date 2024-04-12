@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `shopmaster_cecor`.`companies` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nit` VARCHAR(45) NOT NULL,
   `name` VARCHAR(50) NOT NULL,
+  `address` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 7
@@ -197,6 +198,7 @@ COLLATE = utf8mb4_general_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `shopmaster_cecor`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
+  `image` VARCHAR(255) NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
   `document` VARCHAR(20) NOT NULL,
@@ -215,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `shopmaster_cecor`.`users` (
     FOREIGN KEY (`role_id`)
     REFERENCES `shopmaster_cecor`.`rols` (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 15
+AUTO_INCREMENT = 0
 DEFAULT CHARACTER SET = utf8mb3;
 
 
